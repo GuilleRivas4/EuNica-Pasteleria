@@ -5,8 +5,7 @@
 }
 
 body {
-  padding: 0 80px 0;
-  background-color: white;
+  background-color: #ffdec8;
   font-family: "Source Sans Pro", "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
   color: #D83A56;
 }
@@ -39,16 +38,20 @@ body .rutaNavegacion a {
 body .rutaNavegacion span {
   font-weight: 600;
 }
+body .padding__contenido {
+  padding: 0 80px 0;
+}
 
 /*------------------ HEADER ------------------*/
 header {
   position: sticky;
   top: 0;
   z-index: 2;
+  box-shadow: 0 4px 8px rgba(90, 1, 1, 0.24);
 }
 header .navbar-brand {
-  width: 68px;
-  height: 39.6px;
+  width: 90px;
+  height: 50px;
 }
 header img {
   width: 100%;
@@ -109,7 +112,7 @@ header .bg {
 }
 
 .home__introduccion {
-  background-color: #F4C7AB;
+  background-color: #ffcabd;
   padding-bottom: 20px;
   margin-bottom: 40px;
 }
@@ -117,7 +120,7 @@ header .bg {
   text-align: center;
 }
 .home__introduccion .home__introduccion__texto .home__introduccion__texto__titulo {
-  padding-top: 20px;
+  padding-top: 36px;
 }
 .home__introduccion .home__introduccion__texto .home__introduccion__texto__subtitulo {
   font-size: 1.2rem;
@@ -147,7 +150,7 @@ header .bg {
   border-radius: 8px;
   border-style: solid;
   border-color: #d83a5734;
-  background: #ecc097;
+  background: #f7b4a4;
 }
 .home__info div {
   padding: 8px;
@@ -195,7 +198,7 @@ header .bg {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
-    gap: 10px;
+    gap: 16px;
     grid-template-areas: "card1" "card2" "card3" "card4";
     justify-content: center;
     text-align: center;
@@ -224,7 +227,7 @@ header .bg {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    gap: 16px;
     grid-template-areas: "card1 card2" "card3 card4";
     justify-content: center;
     text-align: center;
@@ -250,7 +253,7 @@ header .bg {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    gap: 10px;
+    gap: 16px;
     grid-template-areas: "card1 card2 card3 card4";
     justify-content: center;
     text-align: center;
@@ -447,11 +450,29 @@ header .bg {
 
 /*------------------ CONTACTO ------------------*/
 .contacto__formulario {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  border: #D83A56 solid;
+  border: #fa92a5 solid;
   margin-bottom: 80px;
+  padding: 24px 0;
+}
+.contacto__formulario input, .contacto__formulario textarea {
+  margin: 0 36px;
+}
+.contacto__formulario .contacto__formulario__datos {
+  width: 40%;
+  margin-bottom: 24px;
+}
+.contacto__formulario .contacto__formulario__textarea {
+  width: 90%;
+  max-width: 90%;
+  min-width: 90%;
+  min-height: 56px;
+  max-height: 184px;
 }
 .contacto__formulario .contacto__formulario__datos, .contacto__formulario .contacto__formulario__textarea {
   background: none;
@@ -460,30 +481,20 @@ header .bg {
   border-bottom: 1px solid;
   font-family: "Source Sans Pro", "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
   font-size: 1rem;
-  padding: 15px 20px;
-  margin: 20px 0 20px 20px;
-}
-.contacto__formulario .contacto__formulario__datos {
-  width: 40%;
-}
-.contacto__formulario .contacto__formulario__textarea {
-  width: 90%;
-  max-width: 90%;
-  min-width: 90%;
-  min-height: 50px;
-  max-height: 300px;
+  padding: 8px 0;
 }
 .contacto__formulario .contacto__formulario__boton__rehacer, .contacto__formulario .contacto__formulario__boton__enviar {
   background: none;
   border: none;
   outline: none;
   font-family: "Source Sans Pro", "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
-  font-size: 1.2rem;
-  font-weight: bolder;
-  padding: 15px 20px;
-  margin: 20px 0 20px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 48px;
+  padding: 8px 32px;
+  margin: 20px 8px 40px 36px;
+  color: white;
   background-color: #D83A56;
-  width: 150px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -493,6 +504,7 @@ header .bg {
   }
 }
 
+/*------------------ MAPA DEL SITIO ------------------*/
 ul {
   margin-left: 40px;
 }

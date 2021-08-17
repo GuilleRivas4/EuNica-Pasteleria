@@ -4,9 +4,7 @@
     padding: 0;
 }
 body{ 
-
-    padding: 0 80px 0;
-    background-color: white;
+    background-color: rgb(255, 222, 200);
     font-family:'Source Sans Pro', 'Fira Sans','Fira Sans Extra Condensed', sans-serif;
     color: #D83A56;
     h1{
@@ -41,5 +39,9 @@ body{
         span{
             font-weight: 600;
         }
+    }
+
+    .padding__contenido{
+        padding: 0 80px 0;
     }
 }

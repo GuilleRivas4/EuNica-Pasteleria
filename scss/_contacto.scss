@@ -1,11 +1,31 @@
 /*------------------ CONTACTO ------------------*/
 
 .contacto__formulario{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: #D83A56 solid ;
+    border: #fa92a5 solid ;
     margin-bottom: 80px;
+    padding: 24px 0;
+
+    input, textarea{
+        margin: 0 36px;
+    }
+
+    .contacto__formulario__datos{
+        width: 40%;
+        margin-bottom: 24px;
+    }
+    .contacto__formulario__textarea{
+        width: 90%;
+        max-width: 90%;
+        min-width: 90%;
+        min-height: 56px;
+        max-height: 184px;
+    }
 
     .contacto__formulario__datos, .contacto__formulario__textarea{
         background: none;
@@ -14,30 +34,21 @@
         border-bottom: 1px solid ;
         font-family:'Source Sans Pro', 'Fira Sans','Fira Sans Extra Condensed', sans-serif;
         font-size: 1rem;
-        padding: 15px 20px;
-        margin: 20px 0 20px 20px;
+        padding: 8px 0;
     }
-    .contacto__formulario__datos{
-        width: 40%;
-    }
-    .contacto__formulario__textarea{
-            width: 90%;
-            max-width: 90%;
-            min-width: 90%;
-            min-height: 50px;
-            max-height: 300px;
-    }
+
     .contacto__formulario__boton__rehacer, .contacto__formulario__boton__enviar{
         background: none;
         border: none;
         outline: none;
         font-family:'Source Sans Pro', 'Fira Sans','Fira Sans Extra Condensed', sans-serif;
-        font-size: 1.2rem;
-        font-weight: bolder;
-        padding: 15px 20px;
-        margin: 20px 0 20px 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        height: 48px;
+        padding: 8px 32px;
+        margin: 20px 8px 40px 36px;
+        color: white;
         background-color: #D83A56;
-        width: 150px;
         border-radius: 10px ;
         cursor: pointer;
     }

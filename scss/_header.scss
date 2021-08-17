@@ -3,11 +3,11 @@ header{
     position: sticky;
     top: 0;
     z-index: 2;
-
+    box-shadow: 0 4px 8px rgba(90, 1, 1, 0.24);
 
     .navbar-brand {
-        width: 68px;
-        height: 39.6px;
+        width: 90px;
+        height: 50px;
     }
 
         img {
@@ -16,6 +16,6 @@ header{
     }
 
     .bg {
-        background-color: hsl(143, 67%, 59%);
+        background-color: #D83A56;
     }
 }

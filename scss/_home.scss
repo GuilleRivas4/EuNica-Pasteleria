@@ -65,14 +65,14 @@
 }
 
 .home__introduccion{
-    background-color: #F4C7AB;
+    background-color: rgb(255, 202, 189);
     padding-bottom: 20px;
     margin-bottom: 40px;
 
     .home__introduccion__texto {
         text-align: center;
         .home__introduccion__texto__titulo {
-            padding-top: 20px;
+            padding-top: 36px;
         }
         .home__introduccion__texto__subtitulo {
             font-size: 1.2rem;
@@ -101,7 +101,6 @@
     }
 }
 
-
 .home__info{
 
     .home__info__contenedor{
@@ -110,7 +109,7 @@
         border-radius: 8px;
         border-style: solid;
         border-color: #d83a5734;
-        background: rgb(236, 192, 151);
+        background: rgb(247, 180, 164);
     }
 
     div {
@@ -172,7 +171,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
-        gap: 10px;
+        gap: 16px;
         grid-template-areas: 
             "card1"
             "card2"
@@ -214,7 +213,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 10px;
+        gap: 16px;
         grid-template-areas: 
             "card1 card2"
             "card3 card4";
@@ -247,7 +246,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
-        gap: 10px;
+        gap: 16px;
         grid-template-areas: 
             "card1 card2 card3 card4";
         justify-content: center;
