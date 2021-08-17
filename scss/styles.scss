@@ -1,0 +1,19 @@
+
+    @mixin sizes($width, $heigth){
+        height: $heigth;
+        width: $width;
+    }
+
+@import "body";
+@import "header";
+
+@import "home";
+
+@import "productos";
+@import "galeria";
+@import "sobreNosotros";
+@import "contacto";
+
+@import "mapaDelSitio";
+@import "footer";
+

@@ -1,0 +1,50 @@
+/*------------------ CONTACTO ------------------*/
+
+.contacto__formulario{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: #D83A56 solid ;
+    margin-bottom: 80px;
+
+    .contacto__formulario__datos, .contacto__formulario__textarea{
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid ;
+        font-family:'Source Sans Pro', 'Fira Sans','Fira Sans Extra Condensed', sans-serif;
+        font-size: 1rem;
+        padding: 15px 20px;
+        margin: 20px 0 20px 20px;
+    }
+    .contacto__formulario__datos{
+        width: 40%;
+    }
+    .contacto__formulario__textarea{
+            width: 90%;
+            max-width: 90%;
+            min-width: 90%;
+            min-height: 50px;
+            max-height: 300px;
+    }
+    .contacto__formulario__boton__rehacer, .contacto__formulario__boton__enviar{
+        background: none;
+        border: none;
+        outline: none;
+        font-family:'Source Sans Pro', 'Fira Sans','Fira Sans Extra Condensed', sans-serif;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        padding: 15px 20px;
+        margin: 20px 0 20px 20px;
+        background-color: #D83A56;
+        width: 150px;
+        border-radius: 10px ;
+        cursor: pointer;
+    }
+    
+    @media only screen and (max-width: 768px){
+        .contacto__formulario__datos, .contacto__formulario__textarea, .contacto__formulario__boton__rehacer, .contacto__formulario__boton__enviar{
+            width: 60%;
+        }
+    }
+}

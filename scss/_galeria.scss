@@ -1,0 +1,79 @@
+/*------------------ GALERIA ------------------*/
+
+.seccion__galeria{
+    margin-bottom: 120px;
+
+    .seccion__galeria__contenedor{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 50vh);
+        gap: 16px 16px;
+        grid-template-areas:
+            "imagen1 imagen2 imagen2 imagen3"
+            "imagen4 imagen4 imagen5 imagen5"
+            "imagen7 imagen6 imagen5 imagen5"
+            "imagen9 imagen9 imagen8 imagen10";
+        
+            img{
+                @include sizes(100%, 100%);
+                object-fit: cover;
+            }
+            
+            .seccion__galeria__contenedor__imagen1 { 
+                grid-area: imagen1;
+            }
+            
+            .seccion__galeria__contenedor__imagen2 {
+                grid-area: imagen2;
+            }
+            
+            .seccion__galeria__contenedor__imagen3 {
+                grid-area: imagen3;
+            }
+            
+            .seccion__galeria__contenedor__imagen4 {
+                grid-area: imagen4;
+            }
+            
+            .seccion__galeria__contenedor__imagen5 {
+                grid-area: imagen5;
+            }
+            
+            .seccion__galeria__contenedor__imagen6 {
+                grid-area: imagen6;
+            }
+            
+            .seccion__galeria__contenedor__imagen7 {
+                grid-area: imagen7;
+            }
+            
+            .seccion__galeria__contenedor__imagen8 {
+                grid-area: imagen8;
+            }
+            
+            .seccion__galeria__contenedor__imagen9 {
+                grid-area: imagen9;
+            }
+            
+            .seccion__galeria__contenedor__imagen10 { 
+                grid-area: imagen10;
+            }
+    }
+    @media only screen and (max-width: 768px){
+        .seccion__galeria__contenedor{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, 0.5fr);
+        grid-template-areas:
+        "imagen1"
+        "imagen2"
+        "imagen3"
+        "imagen4"
+        "imagen5"
+        "imagen6"
+        "imagen7"
+        "imagen8"
+        "imagen9"
+        "imagen10";}
+    }
+}

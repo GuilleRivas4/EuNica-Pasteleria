@@ -1,0 +1,256 @@
+/*------------------ HOME ------------------*/
+
+
+.home__cards__productos{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "tortas cupcakes macarons"
+        "shots budines tartas";
+
+    .home__cards__productos__tortas{
+        grid-area: tortas;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .home__cards__productos__cupcakes{
+        grid-area: cupcakes;
+        @extend .home__cards__productos__tortas
+    }
+
+    .home__cards__productos__macarons{
+        grid-area: macarons;
+        @extend .home__cards__productos__tortas
+    }
+
+    .home__cards__productos__shots{
+        grid-area: shots;
+        @extend .home__cards__productos__tortas
+    }
+
+    .home__cards__productos__budines{
+        grid-area: budines;
+        @extend .home__cards__productos__tortas
+    }
+
+    .home__cards__productos__tartas{
+        grid-area: tartas;
+        @extend .home__cards__productos__tortas
+    }
+
+    img{
+        border-radius: 100%;
+        justify-content: center;
+        align-content: center;
+        padding: 6px;
+        border-style: solid;
+        border-width: 2px;
+        border-color:hsl(150, 51%, 65%);
+        @include sizes(136px, 136px);
+        transition: all 1.5s;
+    }
+    p {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    .home__cards__productos--over:hover{
+        transform: rotateY(360deg);
+    }
+}
+
+.home__introduccion{
+    background-color: #F4C7AB;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+
+    .home__introduccion__texto {
+        text-align: center;
+        .home__introduccion__texto__titulo {
+            padding-top: 20px;
+        }
+        .home__introduccion__texto__subtitulo {
+            font-size: 1.2rem;
+            padding: 40px 60px 40px 60px;
+        }
+    }
+    .home__introduccion__galeria{
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+    
+        .home__introduccion__galeria__imagen1{
+            grid-area: imagen1;
+        }
+        
+        .home__introduccion__galeria__imagen2{
+            grid-area: imagen2;
+        }
+        
+        .home__introduccion__galeria__imagen3{
+            grid-area: imagen3;
+        }
+        img {
+            width: 80%;
+        }
+    }
+}
+
+
+.home__info{
+
+    .home__info__contenedor{
+        padding: 20px;
+        margin-bottom: 40px;
+        border-radius: 8px;
+        border-style: solid;
+        border-color: #d83a5734;
+        background: rgb(236, 192, 151);
+    }
+
+    div {
+        padding: 8px;
+    }
+
+    h2 {
+        color: #D83A56;
+        padding: 8px 0 8px;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+    .home__info__cards1{
+        grid-area: card1;
+    }
+
+    .home__info__cards2{
+        grid-area: card2;
+    }
+
+    .home__info__cards3{
+        grid-area: card3;
+    }
+
+    .home__info__cards4{
+        grid-area: card4;
+    }
+
+    .home__info__imagenes{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 768px)
+{
+    .home__cards__productos{
+        display: none;
+    }
+
+    .home__introduccion__galeria{
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 36px;
+        grid-template-areas:
+            "imagen1"
+            "imagen2"
+            "imagen3";
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .home__info{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+            "card1"
+            "card2"
+            "card3"
+            "card4";
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+    .home__cards__productos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            "tortas cupcakes"
+            "macarons shots"
+            "budines tartas";
+    }
+
+    .home__introduccion__galeria{
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 36px;
+        grid-template-areas:
+            "imagen1"
+            "imagen2"
+            "imagen3";
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .home__info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+            "card1 card2"
+            "card3 card4";
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 992px)
+{
+    .home__cards__productos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+            "tortas cupcakes macarons"
+            "shots budines tartas";
+    }
+
+    .home__introduccion__galeria{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 36px;
+        grid-template-areas: 
+            "imagen1 imagen2 imagen3";
+    }
+
+    .home__info{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 10px;
+        grid-template-areas: 
+            "card1 card2 card3 card4";
+        justify-content: center;
+        text-align: center;
+    }
+}

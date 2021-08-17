@@ -1,0 +1,30 @@
+/*------------------ FOOTER ------------------*/
+footer{
+    background-color:#66DE93;
+    color: white;
+    padding: 20px;
+
+    .footer__redes__titulo{
+        color: #DEEDF0;
+        margin-bottom: 8px;
+    }
+
+    .footer__redes__info{
+        display: flex;
+        flex-direction: column;
+        
+        p{
+            display: inline-block;
+        }
+        .footer__redes__iconos{
+            @include sizes(24px, 24px);
+            margin-right: 8px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            margin-left: 36px;
+            font-style:oblique;
+        }
+    }
+}

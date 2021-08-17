@@ -1,0 +1,535 @@
+/*------------------ BODY ------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0 80px 0;
+  background-color: white;
+  font-family: "Source Sans Pro", "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
+  color: #D83A56;
+}
+body h1 {
+  color: #D83A56;
+  font-size: 2.4rem;
+  margin: 30px 0 30px;
+  text-align: center;
+  font-weight: 800;
+}
+body h2 {
+  color: #D83A56;
+  font-weight: 600;
+  font-size: 2rem;
+}
+body h3 {
+  font-size: 1.4rem;
+}
+body h4 {
+  font-size: 1.2rem;
+}
+body .rutaNavegacion {
+  margin-top: 24px;
+  font-size: 1.2rem;
+}
+body .rutaNavegacion a {
+  text-decoration: none;
+  color: #D83A56;
+}
+body .rutaNavegacion span {
+  font-weight: 600;
+}
+
+/*------------------ HEADER ------------------*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+header .navbar-brand {
+  width: 68px;
+  height: 39.6px;
+}
+header img {
+  width: 100%;
+  height: 100%;
+}
+header .bg {
+  background-color: #D83A56;
+}
+
+/*------------------ HOME ------------------*/
+.home__cards__productos {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "tortas cupcakes macarons" "shots budines tartas";
+}
+.home__cards__productos .home__cards__productos__tortas, .home__cards__productos .home__cards__productos__tartas, .home__cards__productos .home__cards__productos__budines, .home__cards__productos .home__cards__productos__shots, .home__cards__productos .home__cards__productos__macarons, .home__cards__productos .home__cards__productos__cupcakes {
+  grid-area: tortas;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.home__cards__productos .home__cards__productos__cupcakes {
+  grid-area: cupcakes;
+}
+.home__cards__productos .home__cards__productos__macarons {
+  grid-area: macarons;
+}
+.home__cards__productos .home__cards__productos__shots {
+  grid-area: shots;
+}
+.home__cards__productos .home__cards__productos__budines {
+  grid-area: budines;
+}
+.home__cards__productos .home__cards__productos__tartas {
+  grid-area: tartas;
+}
+.home__cards__productos img {
+  border-radius: 100%;
+  justify-content: center;
+  align-content: center;
+  padding: 6px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #78d3a6;
+  height: 136px;
+  width: 136px;
+  transition: all 1.5s;
+}
+.home__cards__productos p {
+  font-size: 24px;
+  font-weight: 600;
+}
+.home__cards__productos .home__cards__productos--over:hover {
+  transform: rotateY(360deg);
+}
+
+.home__introduccion {
+  background-color: #F4C7AB;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+.home__introduccion .home__introduccion__texto {
+  text-align: center;
+}
+.home__introduccion .home__introduccion__texto .home__introduccion__texto__titulo {
+  padding-top: 20px;
+}
+.home__introduccion .home__introduccion__texto .home__introduccion__texto__subtitulo {
+  font-size: 1.2rem;
+  padding: 40px 60px 40px 60px;
+}
+.home__introduccion .home__introduccion__galeria {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.home__introduccion .home__introduccion__galeria .home__introduccion__galeria__imagen1 {
+  grid-area: imagen1;
+}
+.home__introduccion .home__introduccion__galeria .home__introduccion__galeria__imagen2 {
+  grid-area: imagen2;
+}
+.home__introduccion .home__introduccion__galeria .home__introduccion__galeria__imagen3 {
+  grid-area: imagen3;
+}
+.home__introduccion .home__introduccion__galeria img {
+  width: 80%;
+}
+
+.home__info .home__info__contenedor {
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #d83a5734;
+  background: #ecc097;
+}
+.home__info div {
+  padding: 8px;
+}
+.home__info h2 {
+  color: #D83A56;
+  padding: 8px 0 8px;
+}
+.home__info p {
+  font-size: 1rem;
+}
+.home__info .home__info__cards1 {
+  grid-area: card1;
+}
+.home__info .home__info__cards2 {
+  grid-area: card2;
+}
+.home__info .home__info__cards3 {
+  grid-area: card3;
+}
+.home__info .home__info__cards4 {
+  grid-area: card4;
+}
+.home__info .home__info__imagenes {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .home__cards__productos {
+    display: none;
+  }
+
+  .home__introduccion__galeria {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 36px;
+    grid-template-areas: "imagen1" "imagen2" "imagen3";
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .home__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    grid-template-areas: "card1" "card2" "card3" "card4";
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .home__cards__productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "tortas cupcakes" "macarons shots" "budines tartas";
+  }
+
+  .home__introduccion__galeria {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 36px;
+    grid-template-areas: "imagen1" "imagen2" "imagen3";
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .home__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    grid-template-areas: "card1 card2" "card3 card4";
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .home__cards__productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "tortas cupcakes macarons" "shots budines tartas";
+  }
+
+  .home__introduccion__galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 36px;
+    grid-template-areas: "imagen1 imagen2 imagen3";
+  }
+
+  .home__info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+    grid-template-areas: "card1 card2 card3 card4";
+    justify-content: center;
+    text-align: center;
+  }
+}
+/*------------------ PRODUCTOS ------------------*/
+.productos__opciones {
+  margin: 48px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.2fr, 0.6fr, 0.6fr, 0.2fr, 0.2fr, 0.6fr, 0.6fr, 0.2fr;
+  grid-template-areas: "titulo1 titulo2 titulo3" "detalle1 detalle2 detalle3" "ingredientes1 ingredientes2 ingredientes3" "precio1 precio2 precio3" "titulo4 titulo5 titulo6" "detalle4 detalle5 detalle6" "ingredientes4 ingredientes5 ingredientes6" "precio4 precio5 precio6";
+  gap: 12px;
+}
+.productos__opciones div {
+  border: solid;
+  border-color: #ffb492;
+  padding: 24px;
+  border-radius: 8px;
+}
+.productos__opciones ul {
+  list-style-type: none;
+}
+.productos__opciones h3 {
+  font-weight: 600;
+}
+.productos__opciones h4 {
+  font-weight: 800;
+}
+.productos__opciones li {
+  font-size: 0.9rem;
+}
+.productos__opciones .productos__opciones__tortas h3 {
+  grid-area: titulo1;
+}
+.productos__opciones .productos__opciones__tortas .productos__opciones__tortas__detalle {
+  grid-area: detalle1;
+}
+.productos__opciones .productos__opciones__tortas .productos__opciones__tortas__ingredientes {
+  grid-area: ingredientes1;
+}
+.productos__opciones .productos__opciones__tortas h4 {
+  grid-area: precio1;
+}
+.productos__opciones .productos__opciones__cupcakes h3 {
+  grid-area: titulo2;
+}
+.productos__opciones .productos__opciones__cupcakes .productos__opciones__cupcakes__detalle {
+  grid-area: detalle2;
+}
+.productos__opciones .productos__opciones__cupcakes .productos__opciones__cupcakes__ingredientes {
+  grid-area: ingredientes2;
+}
+.productos__opciones .productos__opciones__cupcakes h4 {
+  grid-area: precio2;
+}
+.productos__opciones .productos__opciones__macarons h3 {
+  grid-area: titulo3;
+}
+.productos__opciones .productos__opciones__macarons .productos__opciones__macarons__detalle {
+  grid-area: detalle3;
+}
+.productos__opciones .productos__opciones__macarons .productos__opciones__macarons__ingredientes {
+  grid-area: ingredientes3;
+}
+.productos__opciones .productos__opciones__macarons h4 {
+  grid-area: precio3;
+}
+.productos__opciones .productos__opciones__shots h3 {
+  grid-area: titulo4;
+}
+.productos__opciones .productos__opciones__shots .productos__opciones__shots__detalle {
+  grid-area: detalle4;
+}
+.productos__opciones .productos__opciones__shots .productos__opciones__shots__ingredientes {
+  grid-area: ingredientes4;
+}
+.productos__opciones .productos__opciones__shots h4 {
+  grid-area: precio4;
+}
+.productos__opciones .productos__opciones__budines h3 {
+  grid-area: titulo5;
+}
+.productos__opciones .productos__opciones__budines .productos__opciones__budines__detalle {
+  grid-area: detalle5;
+}
+.productos__opciones .productos__opciones__budines .productos__opciones__budines__ingredientes {
+  grid-area: ingredientes5;
+}
+.productos__opciones .productos__opciones__budines h4 {
+  grid-area: precio5;
+}
+.productos__opciones .productos__opciones__tartas h3 {
+  grid-area: titulo6;
+}
+.productos__opciones .productos__opciones__tartas .productos__opciones__tartas__detalle {
+  grid-area: detalle6;
+}
+.productos__opciones .productos__opciones__tartas .productos__opciones__tartas__ingredientes {
+  grid-area: ingredientes6;
+}
+.productos__opciones .productos__opciones__tartas h4 {
+  grid-area: precio6;
+}
+@media only screen and (max-width: 768px) {
+  .productos__opciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr, 0.6fr, 0.6fr, 0.2fr, 0.2fr, 0.6fr, 0.6fr, 0.2fr, 0.2fr, 0.6fr, 0.6fr, 0.2fr;
+    grid-template-areas: "titulo1" "detalle1" "ingredientes1" "precio1" "titulo2" "detalle2" "ingredientes2" "precio2" "titulo3" "detalle3" "ingredientes3" "precio3" "titulo4" "detalle4" "ingredientes4" "precio4" "titulo5" "detalle5" "ingredientes5" "precio5" "titulo6" "detalle6" "ingredientes6" "precio6";
+  }
+}
+
+/*------------------ GALERIA ------------------*/
+.seccion__galeria {
+  margin-bottom: 120px;
+}
+.seccion__galeria .seccion__galeria__contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 50vh);
+  gap: 16px 16px;
+  grid-template-areas: "imagen1 imagen2 imagen2 imagen3" "imagen4 imagen4 imagen5 imagen5" "imagen7 imagen6 imagen5 imagen5" "imagen9 imagen9 imagen8 imagen10";
+}
+.seccion__galeria .seccion__galeria__contenedor img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.seccion__galeria .seccion__galeria__contenedor .seccion__galeria__contenedor__imagen1 {
+  grid-area: imagen1;
+}
+.seccion__galeria .seccion__galeria__contenedor .seccion__galeria__contenedor__imagen2 {
+  grid-area: imagen2;
+}
+.seccion__galeria .seccion__galeria__contenedor .seccion__galeria__contenedor__imagen3 {
+  grid-area: imagen3;
+}
+.seccion__galeria .seccion__galeria__contenedor .seccion__galeria__contenedor__imagen4 {
+  grid-area: imagen4;
+}
+.seccion__galeria .seccion__galeria__contenedor .seccion__galeria__contenedor__imagen5 {
+  grid-area: imagen5;
+}
+.seccion__galeria .seccion__galeria__contenedor .seccion__galeria__contenedor__imagen6 {
+  grid-area: imagen6;
+}
+.seccion__galeria .seccion__galeria__contenedor .seccion__galeria__contenedor__imagen7 {
+  grid-area: imagen7;
+}
+.seccion__galeria .seccion__galeria__contenedor .seccion__galeria__contenedor__imagen8 {
+  grid-area: imagen8;
+}
+.seccion__galeria .seccion__galeria__contenedor .seccion__galeria__contenedor__imagen9 {
+  grid-area: imagen9;
+}
+.seccion__galeria .seccion__galeria__contenedor .seccion__galeria__contenedor__imagen10 {
+  grid-area: imagen10;
+}
+@media only screen and (max-width: 768px) {
+  .seccion__galeria .seccion__galeria__contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 0.5fr);
+    grid-template-areas: "imagen1" "imagen2" "imagen3" "imagen4" "imagen5" "imagen6" "imagen7" "imagen8" "imagen9" "imagen10";
+  }
+}
+
+/*------------------ SOBRE NOSOTROS ------------------*/
+.sobrenosotros__contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  margin-top: 48px;
+}
+.sobrenosotros__contenedor .sobrenosotros__contenedor__texto {
+  width: 60%;
+  display: inline-block;
+  padding-right: 32px;
+}
+.sobrenosotros__contenedor .sobrenosotros__contenedor__texto p {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
+.sobrenosotros__contenedor .sobrenosotros__contenedor__imagen {
+  width: 40%;
+}
+.sobrenosotros__contenedor .sobrenosotros__contenedor__imagen img {
+  width: 100%;
+}
+
+/*------------------ CONTACTO ------------------*/
+.contacto__formulario {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: #D83A56 solid;
+  margin-bottom: 80px;
+}
+.contacto__formulario .contacto__formulario__datos, .contacto__formulario .contacto__formulario__textarea {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  font-family: "Source Sans Pro", "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
+  font-size: 1rem;
+  padding: 15px 20px;
+  margin: 20px 0 20px 20px;
+}
+.contacto__formulario .contacto__formulario__datos {
+  width: 40%;
+}
+.contacto__formulario .contacto__formulario__textarea {
+  width: 90%;
+  max-width: 90%;
+  min-width: 90%;
+  min-height: 50px;
+  max-height: 300px;
+}
+.contacto__formulario .contacto__formulario__boton__rehacer, .contacto__formulario .contacto__formulario__boton__enviar {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: "Source Sans Pro", "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: 15px 20px;
+  margin: 20px 0 20px 20px;
+  background-color: #D83A56;
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .contacto__formulario .contacto__formulario__datos, .contacto__formulario .contacto__formulario__textarea, .contacto__formulario .contacto__formulario__boton__rehacer, .contacto__formulario .contacto__formulario__boton__enviar {
+    width: 60%;
+  }
+}
+
+ul {
+  margin-left: 40px;
+}
+ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+ul li a {
+  text-decoration: none;
+  color: #8b8b8b;
+}
+
+/*------------------ FOOTER ------------------*/
+footer {
+  background-color: #D83A56;
+  color: white;
+  padding: 20px;
+}
+footer .footer__redes__titulo {
+  color: #DEEDF0;
+  margin-bottom: 8px;
+}
+footer .footer__redes__info {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer__redes__info p {
+  display: inline-block;
+}
+footer .footer__redes__info .footer__redes__iconos {
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+}
+footer .footer__redes__info a {
+  text-decoration: none;
+  color: white;
+  margin-left: 36px;
+  font-style: oblique;
+}/*# sourceMappingURL=styles.css.map */
