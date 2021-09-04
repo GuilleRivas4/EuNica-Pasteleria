@@ -37,6 +37,19 @@
             font-style: oblique;
             font-weight: 600;
         }
+        .productos__detalle__button{
+            width: 40%;
+            height: 32px;
+            border-radius: 4px;
+            background-color: #D83A56;;
+            color: white;
+            font-weight: 600;
+            border-color: #D83A56;
+            border-style: solid;
+            box-shadow: 0.5px 2px 1px rgba(90, 1, 1, 0.24);
+            margin: 16px 0px 32px;
+        }
+
         .productos__detalle__texto__importante{
             padding: 16px;
             font-style: oblique;

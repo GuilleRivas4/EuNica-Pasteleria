@@ -315,7 +315,16 @@ section .productos p {
   font-size: 0.85rem;
   color: #737171;
   line-height: 1.2rem;
-  margin-top: 8px;
+  margin: 8px 0px 0px;
+}
+section .productos .productos__link__animacion:hover {
+  transform: translate(1px, -4px);
+}
+section .productos .productos__cards__cantidad {
+  margin: 4px 0px 8px;
+  font-weight: 700;
+  font-family: "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
+  letter-spacing: 0.01rem;
 }
 section .productos .productos__button {
   width: 100%;
@@ -566,6 +575,18 @@ section .productos__tortas .productos__tortas__selvaNegra {
 .productos__detalle .productos__detalle__texto .productos__detalle__texto__aclaracion {
   font-style: oblique;
   font-weight: 600;
+}
+.productos__detalle .productos__detalle__texto .productos__detalle__button {
+  width: 40%;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #D83A56;
+  color: white;
+  font-weight: 600;
+  border-color: #D83A56;
+  border-style: solid;
+  box-shadow: 0.5px 2px 1px rgba(90, 1, 1, 0.24);
+  margin: 16px 0px 32px;
 }
 .productos__detalle .productos__detalle__texto .productos__detalle__texto__importante {
   padding: 16px;
