@@ -1,15 +1,17 @@
 /*------------------ MAPA DEL SITIO ------------------*/
 
+.mapaDelSitio{
 
-ul{
-    margin-left: 40px;
-    li{
-        list-style: none;
-        margin-left: 20px;
+    ul{
+        margin-left: 40px;
+        li{
+            list-style: none;
+            margin-left: 20px;
 
-        a{
-            text-decoration: none;
-            color: #8b8b8b;
+            a{
+                text-decoration: none;
+                color: #8b8b8b;
+            }
         }
     }
 }
