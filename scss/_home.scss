@@ -1,62 +1,39 @@
 /*------------------ HOME ------------------*/
 
+.carousel{
+    z-index: 0;
+    li{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin: 0 16px;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        display: none;
+    }
+    img{
+        height: 90vh;
+        object-fit: cover;
+    }
+}
 
 .home__cards__productos{
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-        "tortas cupcakes macarons"
-        "shots budines tartas";
-
-    .home__cards__productos__tortas{
-        grid-area: tortas;
-        justify-self: center;
-        align-self: center;
-        text-align: center;
-        margin-bottom: 50px;
-    }
-
-    .home__cards__productos__cupcakes{
-        grid-area: cupcakes;
-        @extend .home__cards__productos__tortas
-    }
-
-    .home__cards__productos__macarons{
-        grid-area: macarons;
-        @extend .home__cards__productos__tortas
-    }
-
-    .home__cards__productos__shots{
-        grid-area: shots;
-        @extend .home__cards__productos__tortas
-    }
-
-    .home__cards__productos__budines{
-        grid-area: budines;
-        @extend .home__cards__productos__tortas
-    }
-
-    .home__cards__productos__tartas{
-        grid-area: tartas;
-        @extend .home__cards__productos__tortas
-    }
+    display: flex;
+    justify-content: center;
 
     img{
         border-radius: 100%;
-        justify-content: center;
-        align-content: center;
         padding: 6px;
         border-style: solid;
-        border-width: 2px;
-        border-color:hsl(150, 51%, 65%);
+        border-width: 2.6px;
+        border-color:#70d182;
         @include sizes(136px, 136px);
         transition: all 1.5s;
     }
     p {
         font-size: 24px;
         font-weight: 600;
+        text-align: center;
     }
     
     .home__cards__productos--over:hover{
@@ -65,53 +42,21 @@
 }
 
 .home__introduccion{
-    background-color: rgb(255, 202, 189);
+    background-color: #d3ffdb;
     padding-bottom: 20px;
     margin-bottom: 40px;
-
-    .home__introduccion__texto {
-        text-align: center;
-        .home__introduccion__texto__titulo {
-            padding-top: 36px;
-        }
-        .home__introduccion__texto__subtitulo {
-            font-size: 1.2rem;
-            padding: 40px 60px 40px 60px;
-        }
-    }
-    .home__introduccion__galeria{
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 20px;
-    
-        .home__introduccion__galeria__imagen1{
-            grid-area: imagen1;
-        }
-        
-        .home__introduccion__galeria__imagen2{
-            grid-area: imagen2;
-        }
-        
-        .home__introduccion__galeria__imagen3{
-            grid-area: imagen3;
-        }
-        img {
-            width: 80%;
-        }
-    }
 }
 
 .home__info{
-
     .home__info__contenedor{
         padding: 20px;
         margin-bottom: 40px;
         border-radius: 8px;
         border-style: solid;
-        border-color: #d83a5734;
-        background: rgb(247, 180, 164);
+        border-color: #70d18274;
+        background: #d3ffdb;
     }
-
+    
     div {
         padding: 8px;
     }
@@ -119,6 +64,7 @@
     h2 {
         color: #D83A56;
         padding: 8px 0 8px;
+        font-size: 1.6rem;
     }
 
     p{
@@ -137,118 +83,303 @@
         grid-area: card3;
     }
 
-    .home__info__cards4{
-        grid-area: card4;
-    }
-
     .home__info__imagenes{
         width: 100%;
+        object-fit: cover;
+        border-radius: 4px;
     }
 }
 
-
 @media only screen and (max-width: 768px)
 {
+    .padding__contenido{
+        padding: 0 40px 0;
+    }
+
     .home__cards__productos{
         display: none;
+    }
+
+    .home__introduccion__texto {
+        text-align: center;
+        
+        .home__introduccion__texto__titulo {
+            margin: 0;
+            font-weight: 700;
+            padding-top: 32px;
+            font-size: 1.9rem;
+        }
+        
+        .home__introduccion__texto__subtitulo {
+            font-size: 1.05rem;
+            padding: 16px 24px 32px;
+        }
     }
 
     .home__introduccion__galeria{
         display: grid;
         grid-template-columns: 1;
-        grid-template-rows: repeat(3, 1fr);
-        gap: 36px;
+        grid-template-rows: repeat(2, 0.5fr);
+        gap: 24px;
         grid-template-areas:
             "imagen1"
-            "imagen2"
-            "imagen3";
+            "imagen2";
         justify-content: center;
         text-align: center;
         margin-bottom: 20px;
+
+        .home__introduccion__galeria__imagen1{
+            grid-area: imagen1;
+            height: 30%;
+        }
+        
+        .home__introduccion__galeria__imagen2{
+            grid-area: imagen2;
+            height: 30%;
+        }
+        
+        .home__introduccion__galeria__imagen3{
+            display: none;
+        }
+        img {
+            width: 60%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
     }
     
     .home__info{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         gap: 16px;
         grid-template-areas: 
             "card1"
             "card2"
-            "card3"
-            "card4";
+            "card3";
         justify-content: center;
         text-align: center;
     }
-}
 
+    .home__info__contenedor{
+        display: flex;
+        flex-direction: column;
+        .home__info__textos{
+            width: 100%;
+            display: inline-block;
+        }
+    .home__info__contenedor__imagenes{
+        display: block;
+        width: 100%;
+        height: 60vh;
+        img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        }
+    }
+}
 
 @media only screen and (min-width: 768px) and (max-width: 992px)
 {
     .home__cards__productos{
+        margin: 60px 0 32px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas: 
-            "tortas cupcakes"
-            "macarons shots"
-            "budines tartas";
+        "budines cookies cupcakes" 
+        "macarons mousses shots" 
+        "tartas tortas";
+        text-align: center;
+    }
+
+    .home__introduccion__texto {
+        text-align: center;
+        
+        .home__introduccion__texto__titulo {
+            margin: 0;
+            font-weight: 700;
+            padding-top: 32px;
+            font-size: 2.2rem;
+        }
+        
+        .home__introduccion__texto__subtitulo {
+            font-size: 1.2rem;
+            padding: 24px 24px 32px;
+        }
     }
 
     .home__introduccion__galeria{
+        margin-bottom: 32px;
         display: grid;
-        grid-template-columns: 1;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
         gap: 36px;
-        grid-template-areas:
-            "imagen1"
-            "imagen2"
-            "imagen3";
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 20px;
+        grid-template-areas: 
+            "imagen1 imagen2";
+
+        .home__introduccion__galeria__imagen1{
+            grid-area: imagen1;
+            text-align: right;
+        }
+        
+        .home__introduccion__galeria__imagen2{
+            grid-area: imagen2;
+        }
+        
+        .home__introduccion__galeria__imagen3{
+            display: none;
+        }
+        img {
+            width: 80%;
+            border-radius: 8px;
+        }
     }
 
     .home__info{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 16px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 32px;
         grid-template-areas: 
-            "card1 card2"
-            "card3 card4";
+            "card1"
+            "card2" 
+            "card3";
         justify-content: center;
         text-align: center;
+        margin-bottom: 64px;
+
+        .home__info__contenedor{
+            display: flex;
+            justify-content:space-between;
+            margin-bottom: 0;
+            .home__info__textos{
+                display: inline-block;
+                width: 50%;
+                margin-left: 8px;
+            }
+            .home__info__contenedor__imagenes{
+                display: inline-block;
+                width: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 }
 
 @media only screen and (min-width: 992px)
 {
     .home__cards__productos{
+        margin-top: 60px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas: 
-            "tortas cupcakes macarons"
-            "shots budines tartas";
+            "budines cookies cupcakes macarons"
+            "mousses shots tartas tortas";
+    
+        .home__cards__productos__budines{
+            grid-area: budines;
+            justify-self: center;
+            align-self: center;
+            text-align: center;
+            margin-bottom: 50px;
+            @extend .home__cards__productos__budines
+        }
+    
+        .home__cards__productos__cookies{
+            grid-area: cookies;
+            @extend .home__cards__productos__budines
+        }
+    
+        .home__cards__productos__cupcakes{
+            grid-area: cupcakes;
+            @extend .home__cards__productos__budines
+        }
+    
+        .home__cards__productos__macarons{
+            grid-area: macarons;
+            @extend .home__cards__productos__budines
+        }
+    
+        .home__cards__productos__mousses{
+            grid-area: mousses;
+            @extend .home__cards__productos__budines
+        }
+    
+        .home__cards__productos__shots{
+            grid-area: shots;
+            @extend .home__cards__productos__budines
+        }
+        
+        .home__cards__productos__tartas{
+            grid-area: tartas;
+            @extend .home__cards__productos__budines
+        }
+    
+        .home__cards__productos__tortas{
+            grid-area: tortas;
+            @extend .home__cards__productos__budines
+        }
+    }
+    .home__introduccion__texto {
+        text-align: center;
+        
+        .home__introduccion__texto__titulo {
+            margin: 0;
+            font-weight: 700;
+            padding-top: 32px;
+        }
+        
+        .home__introduccion__texto__subtitulo {
+            font-size: 1.2rem;
+            padding: 32px 32px 36px;
+        }
     }
 
     .home__introduccion__galeria{
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
         gap: 36px;
         grid-template-areas: 
             "imagen1 imagen2 imagen3";
+
+        .home__introduccion__galeria__imagen1{
+            grid-area: imagen1;
+        }
+        
+        .home__introduccion__galeria__imagen2{
+            grid-area: imagen2;
+        }
+        
+        .home__introduccion__galeria__imagen3{
+            grid-area: imagen3;
+        }
+        img {
+            width: 80%;
+            border-radius: 8px;
+        }
     }
 
     .home__info{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
         gap: 16px;
         grid-template-areas: 
-            "card1 card2 card3 card4";
+            "card1 card2 card3";
         justify-content: center;
         text-align: center;
     }

@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg padding__contenido">
             <a class="navbar-brand" href="index.html"><img src="multimedia/iconos/logo.svg" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span><img src="multimedia/iconos/menu_white_24dp.svg" alt=""></span>
             </button>
             <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -53,9 +53,9 @@
     <section>
         <div id="carouselExampleIndicators" class="carousel home__carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -79,34 +79,42 @@
         </div>
     </section>
     <section class="home__cards__productos padding__contenido"> 
-        <div class="home__cards__productos__tortas">
-            <img src="multimedia/cardTortas.jpg" alt="torta selva negra" class="home__cards__productos--over">
-            <div><p>Tortas</p></div>
-        </div>
+        <div class="home__cards__productos__budines">
+            <img src="multimedia/cardBudines.jpg" alt="budin con arandanos" class="home__cards__productos--over">
+            <div> <p>Budines</p> </div>
+        </div> 
+        <div class="home__cards__productos__cookies">
+            <img src="multimedia/cardCupcakes.jpg" alt="cupcake decorado con petalos de flores" class="home__cards__productos--over">
+            <div> <p>Cookies</p> </div>
+        </div> 
         <div class="home__cards__productos__cupcakes">
             <img src="multimedia/cardCupcakes.jpg" alt="cupcake decorado con petalos de flores" class="home__cards__productos--over">
             <div> <p>Cupcakes</p> </div>
         </div> 
         <div class="home__cards__productos__macarons">
             <img src="multimedia/cardMacarons.jpg" alt="macarons amarillos" class="home__cards__productos--over">
-            <div> <p>Macarons</p> </div>
+            <div><p>Macarons</p></div>
+        </div> 
+        <div class="home__cards__productos__mousses">
+            <img src="multimedia/cardMacarons.jpg" alt="macarons amarillos" class="home__cards__productos--over">
+            <div> <p>Mousses</p> </div>
         </div> 
         <div class="home__cards__productos__shots">
             <img src="multimedia/cardShots.jpg" alt="shots de frutos rojos" class="home__cards__productos--over">
             <div> <p>Shots</p> </div>
         </div> 
-        <div class="home__cards__productos__budines">
-            <img src="multimedia/cardBudines.jpg" alt="budin con arandanos" class="home__cards__productos--over">
-            <div> <p>Budines</p> </div>
-        </div> 
         <div class="home__cards__productos__tartas">
             <img src="multimedia/cardTartas.jpg" alt="lemon pie" class="home__cards__productos--over">
             <div> <p>Tartas</p> </div>
         </div> 
+        <div class="home__cards__productos__tortas">
+            <img src="multimedia/cardTortas.jpg" alt="torta selva negra" class="home__cards__productos--over">
+            <div><p>Tortas</p></div>
+        </div>
     </section>
     <section class="home__introduccion ">
         <div class="home__introduccion__texto padding__contenido">
-            <h2 class="home__introduccion__texto__titulo">REGALÁ ALGO RICO</h2>
+            <h1 class="home__introduccion__texto__titulo">REGALÁ ALGO RICO</h1>
             <p class="home__introduccion__texto__subtitulo">
                 Todo lo que ofrecemos puede ser un lindo regalo! Podemos presentarlos en una caja para regalo, agregarle velas y una tarjeta con la frase que elijas.
                 Consultá todo lo que podés elegir en la sección “para agregar” en PRODUCTOS. Podés pasar a retirarlo por la pastelería o también podemos llevarlo. En “Retiro o envío a domicilio” está toda la info!.</p>
@@ -119,60 +127,90 @@
     </section>  
     <section class="home__info padding__contenido">
         <div class="home__info__contenedor home__info__cards1">
-            <img src="multimedia/DSCN3548.jpg" alt="brownie con crema" class="home__info__imagenes">
-            <div>
+            <div class="home__info__contenedor__imagenes">
+                <img src="multimedia/DSCN3548.jpg" alt="brownie con crema" class="home__info__imagenes">
+            </div>
+            <div class="home__info__textos">
                 <h2>Realizar pedidos con anticipación</h2>
                 <p>Como nos gustan las cosas recién hechas, necesitamos un mínimo de 3 días hábiles para preparar tu pedido. De esta manera, podes elegir lo que quieras! Pero, si no contás con esos 3 días de anticipación, no dejes de consultarnos… Siempre tenemos preparaciones adelantadas que podemos ofrecerte! Cuanto antes puedas hacer el pedido, mejor!</p>
             </div>
         </div>
         <div class="home__info__contenedor home__info__cards2">
-            <img src="multimedia/DSCN7127.jpg" alt="budin de vainilla" class="home__info__imagenes">
-            <div>
+            <div class="home__info__contenedor__imagenes">
+                <img src="multimedia/DSCN3548.jpg" alt="brownie con crema" class="home__info__imagenes">
+            </div>
+            <div class="home__info__textos">
                 <h2>Retiro o envío a domicilio</h2>
                 <p>Al pedido lo podrías retirar por la pastelería, que está ubicada en calle 88 Nº 3812 entre 12 y 13, La Plata. A todos los pedidos los preparamos por la mañana. Una vez que esté terminado el tuyo, te avisaremos para que lo pases a retirar, en el momento que puedas, hasta las 16:30 hs. Los envíos a domicilio se realizan con un costo adicional (que varia según la zona de entrega).</p>
             </div>
         </div>
         <div class="home__info__contenedor home__info__cards3">
-            <img src="multimedia/DSCN8296.jpg" alt="budin de limon" class="home__info__imagenes">
-            <div>
+            <div class="home__info__contenedor__imagenes">
+                <img src="multimedia/DSCN3548.jpg" alt="brownie con crema" class="home__info__imagenes">
+            </div>
+            <div class="home__info__textos">
                 <h2>Formas de pago disponible</h2>
                 <p>Las formas de pago que podemos ofrecerte son:</p>
-                <p> Efectivo (al momento de la entrega)</p>
                 <p>Mercado Pago (+ 8 % con tarjeta de crédito o débito / + 3% con envío de dinero)</p>
                 <p>Transferencia (deberías realizar el pago por lo menos 24 hs antes de la entrega)</p>
-            </div>
-        </div>
-        <div class="home__info__contenedor home__info__cards4">
-            <img src="multimedia/DSCN5094.jpg" alt="torta con dulce de leche y granas" class="home__info__imagenes">
-            <div>
-                <h2>Nuestro Catering</h2>
-                <p>Nuestros servicios están a tu disposición, en cualquier lugar que vos elijas para realizar tu fiesta. Para conocer todas las opciones con las que contás para armar tu fiesta, recorré el menú y verás todo lo que podemos ofrecerte. Para cualquier tipo de consulta, no dudes en comunicarte con nosostros, que de manera inmediata responderemos todas tus inquietudes.</p>
+                <p> Efectivo/ cash (al momento de la entrega)</p>
             </div>
         </div>
     </section>
     <footer>
         <div class="padding__contenido">
-            <h2 class="footer__redes__titulo">Contactanos</h2>
-            <div class="footer__redes__info">
-                <div>
-                    <img src="multimedia\iconos/whatsapp.svg" alt="" class="footer__redes__iconos">
-                    <p>+51 9 221 123 4567</p>
+            <div class="footer__contenedor__seguinos">
+                <div class="footer__contenedor__logo">
+                    <img src="multimedia/iconos/logo_footer.svg" alt="">
                 </div>
-                <div>
-                    <img src="multimedia/iconos/instagram.svg" alt="" class="footer__redes__iconos">
-                    <p>@nombre.instagram</p>
+                <div class="footer__contenedor__redes">
+                    <p>¡Seguinos!</p>
+                    <div>
+                        <img src="multimedia/iconos/instagram.svg" alt="" class="footer__redes__iconos">
+                        <p>@eunicaPasteleria</p>
+                    </div>
+                    <div>
+                        <img src="multimedia/iconos/facebook.svg" alt="" class="footer__redes__iconos">
+                        <p>@eunicaPasteleria</p>
+                    </div>
                 </div>
-                <div>
+            </div>
+            <div class="footer__contenedor__mediosDePago">
+                <p>Medios de pago</p>
+                <div class="contenedor__mediosDePago__opciones">
+                    <div class="contenedor__mediosDePago__opciones__transferencia">
+                        <img src="multimedia/iconos/transferencia.svg" alt="" class="footer__redes__iconos">
+                        <p>Transferencia</p>
+                    </div>
+                    <div class="contenedor__mediosDePago__opciones__efectivo">
+                        <img src="multimedia/iconos/efectivo.svg" alt="" class="footer__redes__iconos">
+                        <p>Efectivo</p>
+                    </div>
+                    <div class="contenedor__mediosDePago__opciones__mercadoPago">
+                        <img src="multimedia/iconos/mercadopago.svg" alt="" class="footer__redes__iconos">
+                        <p>Mercado Pago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__contenedor__pedidos">
+                <p>Pedidos</p>
+                <p>Pedidios con 72hs de anticipación</p>
+                <p>¡Contactanos por nuestras redes sociales o por whatsapp</p>
+            </div>
+            <div class="footer__contenedor__contactanos">
+                <p>Contactanos</p>
+                <p>Lun a Sáb de 9 a 18hs</p>
+                <div class="footer__contenedor__contactanos__whatsapp">
+                    <img src="multimedia/iconos/whatsapp.svg" alt="" class="footer__redes__iconos">
+                    <p>+54 221 555 1234</p>
+                </div>
+                <div class="footer__contenedor__contactanos__mail">
                     <img src="multimedia/iconos/email.svg" alt="" class="footer__redes__iconos">
-                    <p>proyectocoderhouse@gmail.com</p>
-                </div>
-                <div>
-                    <a href="pages/mapaDelSitio.html">Mapa del sitio</a>
+                    <p>@eunicapasteleria@gmail.com</p>
                 </div>
             </div>
         </div>
-    </footer>
-    
+    </footer>    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
