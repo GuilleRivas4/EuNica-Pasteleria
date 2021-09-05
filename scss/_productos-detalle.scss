@@ -4,23 +4,11 @@
     margin-bottom: 16px;
     width: 100%;
     display: flex;
-
-    .productos__detalle__contenedorImagen{
-        width: 40%;
-        padding-top: 56px;
-        img{
-                width: 100%;
-                border-radius: 4px;
-            }
-    }
     .productos__detalle__texto {
-        width: 60%;
-        display: inline-block;
-        padding: 32px 0 32px 32px;
-
+        padding: 0 0 32px 32px;
         h1{
             text-align: left;
-            margin: 16px 0;
+            margin: 24px 0;
             font-size: 2rem;
         }
         ul{
@@ -28,7 +16,6 @@
                 list-style: none;
             }
         }
-
         .productos__detalle__texto__precio{
             font-size: 1.2rem;
             font-weight: 800;
@@ -38,7 +25,6 @@
             font-weight: 600;
         }
         .productos__detalle__button{
-            width: 40%;
             height: 32px;
             border-radius: 4px;
             background-color: #D83A56;;
@@ -49,7 +35,6 @@
             box-shadow: 0.5px 2px 1px rgba(90, 1, 1, 0.24);
             margin: 16px 0px 32px;
         }
-
         .productos__detalle__texto__importante{
             padding: 16px;
             font-style: oblique;
@@ -60,5 +45,71 @@
             color: #5e4e4e;
         }
     }
+}
 
+@media only screen and (max-width: 768px)
+{
+    .productos__detalle {
+        display: flex;
+        flex-direction: column;
+        .productos__detalle__contenedorImagen {
+            display: block;
+            width: 100%;
+            padding-top: 24px;
+            img {
+                display: block;
+                width: 100%;
+                border-radius: 4px;
+                }
+        }
+        .productos__detalle__texto {
+            display: inline-block;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 32px;
+            .productos__detalle__button {
+                width: 63%;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+    .productos__detalle__contenedorImagen {
+        width: 50%;
+        padding-top: 24px;
+        img{
+                width: 100%;
+                border-radius: 4px;
+            }
+    }
+    .productos__detalle__texto {
+        width: 50%;
+        display: inline-block;
+        .productos__detalle__button {
+            width: 100%; 
+        }
+    }
+
+}
+
+@media only screen and (min-width: 992px) 
+{    
+    .productos__detalle__contenedorImagen{
+        width: 40%;
+        padding-top: 24px;
+    img{
+            width: 100%;
+            border-radius: 4px;
+        }
+    }
+    .productos__detalle__texto {
+        width: 60%;
+        display: inline-block;
+        .productos__detalle__button {
+            width: 50%;
+        }
+    }
 }
