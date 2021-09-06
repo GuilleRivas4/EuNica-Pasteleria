@@ -2,29 +2,383 @@
 footer{
     background-color: #D83A56;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
+    font-weight:400;
 
-    .footer__redes__titulo{
-        color: #DEEDF0;
-        margin-bottom: 8px;
+    p{
+        color: white;
+        font-size: 0.85rem;
     }
+}
 
-    .footer__redes__info{
+@media only screen and (max-width: 645px){
+    
+    .footer__contenedor__grilla{
         display: flex;
         flex-direction: column;
-        
-        p{
-            display: inline-block;
+        .footer__contenedor__seguinos{
+            display: flex;
+            .footer__contenedor__logo{
+                display: none;
+            }
+            .footer__contenedor__redes{
+                padding-top: 16px;
+                .footer__contenedor__redes__seguinos{
+                    font-size: 1.4rem;
+                    margin-bottom: 8px;
+                    font-style: oblique;
+                }
+                .footer__contenedor__redes__flex{
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    .footer__contenedor__redes__flex__iconoytexto{
+                        padding: 4px 0;
+                        display: flex;
+                        justify-content:space-between;
+                        width: 100%;
+                        img{
+                            display: inline-block;
+                            height: 32px;
+                        }
+                        p{
+                            margin: 4px 0 0 8px;
+                            display: block;
+                        }
+                    }
+                }
+            }
         }
-        .footer__redes__iconos{
-            @include sizes(24px, 24px);
-            margin-right: 8px;
+        .footer__contenedor__mediosDePago{
+            display: none;
         }
-        a{
-            text-decoration: none;
-            color: white;
-            margin-left: 36px;
-            font-style:oblique;
+        .footer__contenedor__pedidos{
+            display: none;
+        }
+        .footer__contenedor__contactanos{
+            display: flex;
+            flex-direction: column;
+            .footer__contenedor__contactanos__titulo{
+                padding-top: 16px;
+                font-size: 1.3rem;
+                margin-bottom: 0;
+            }
+            .footer__contenedor__contactanos__dias{
+                display: none;
+            }
+            .footer__contenedor__contactanos__iconosytexto{
+                display: flex;
+                width: 100%;
+                margin-top: 6px;
+                img{
+                    display: inline-block;
+                    height: 32px;
+                }
+                p{
+                    display: block;
+                    margin: 6px 0 0 8px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 645px) and (max-width: 970px){
+    .footer__contenedor__grilla{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 0.5fr;
+        gap: 24px;
+        grid-template-areas: 
+            "footer__contenedor__seguinos footer__contenedor__contactanos";
+    
+        .footer__contenedor__seguinos{
+            grid-area: footer__contenedor__seguinos;
+            display: flex;
+            .footer__contenedor__logo{
+                margin-right: 16px;
+                width: 30%;
+                display: inline-block;
+                img{
+                    width: 100%;
+                }
+            }
+            .footer__contenedor__redes{
+                padding-top: 16px;
+                .footer__contenedor__redes__seguinos{
+                    font-size: 1.4rem;
+                    margin-bottom: 4px;
+                    font-style: oblique;
+                }
+                .footer__contenedor__redes__flex{
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    .footer__contenedor__redes__flex__iconoytexto{
+                        padding: 2px 0;
+                        display: flex;
+                        justify-content:space-between;
+                        width: 100%;
+                        img{
+                            display: inline-block;
+                            height: 28px;
+                        }
+                        p{
+                            margin: 4px 0 0 8px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__contenedor__mediosDePago{
+            display: none;
+        }
+        .footer__contenedor__pedidos{
+            display: none;
+        }
+        .footer__contenedor__contactanos{
+            grid-area: footer__contenedor__contactanos;
+            display: flex;
+            flex-direction: column;
+            .footer__contenedor__contactanos__titulo{
+                padding-top: 16px;
+                font-size: 1.3rem;
+                margin-bottom: 4px;
+            }
+            .footer__contenedor__contactanos__dias{
+                margin-bottom: 2px;
+            }
+            .footer__contenedor__contactanos__iconosytexto{
+                display: flex;
+                width: 100%;
+                img{
+                    display: inline-block;
+                    height: 28px;
+                }
+                p{
+                    display: block;
+                    margin: 6px 0 0 8px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 970px) and (max-width: 1150px){
+    .footer__contenedor__grilla{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 0.5fr;
+        gap: 36px;
+        grid-template-areas: 
+            "footer__contenedor__seguinos footer__contenedor__mediosDePago footer__contenedor__contactanos";
+    
+        .footer__contenedor__seguinos{
+            grid-area: footer__contenedor__seguinos;
+            display: flex;
+            .footer__contenedor__logo{
+                margin-right: 16px;
+                width: 40%;
+                display: inline-block;
+                img{
+                    width: 100%;
+                    min-width: 80px;
+                }
+            }
+            .footer__contenedor__redes{
+                padding-top: 16px;
+                .footer__contenedor__redes__seguinos{
+                    font-size: 1.4rem;
+                    margin-bottom: 8px;
+                    font-style: oblique;
+                }
+                .footer__contenedor__redes__flex{
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    .footer__contenedor__redes__flex__iconoytexto{
+                        padding: 4px 0;
+                        display: flex;
+                        justify-content:space-between;
+                        width: 100%;
+                        img{
+                            display: inline-block;
+                            height: 28px;
+                        }
+                        p{
+                            margin: 4px 0 0 8px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__contenedor__mediosDePago{
+            grid-area: footer__contenedor__mediosDePago;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 16px;
+            .footer__contenedor__mediosDePago__titulo{
+                display: inline-block;
+                font-size: 1.3rem;
+            }
+            .contenedor__mediosDePago__opciones{
+                display: inline-block;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                .contenedor__mediosDePago__opciones__logo{
+                    display: inline-block;
+                    text-align: center;
+                    width: 33%;
+                    img{
+                        width: 36px;
+                    }
+                }
+            }
+        }
+        .footer__contenedor__pedidos{
+            display: none;
+        }
+        .footer__contenedor__contactanos{
+            grid-area: footer__contenedor__contactanos;
+            display: flex;
+            flex-direction: column;
+            .footer__contenedor__contactanos__titulo{
+                padding-top: 16px;
+                font-size: 1.3rem;
+                margin-bottom: 8px;
+            }
+            .footer__contenedor__contactanos__dias{
+                margin-bottom: 8px;
+            }
+            .footer__contenedor__contactanos__iconosytexto{
+                display: flex;
+                width: 100%;
+                img{
+                    display: inline-block;
+                    height: 28px;
+                }
+                p{
+                    display: block;
+                    margin: 6px 0 0 8px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1150px){
+
+    .footer__contenedor__grilla{
+        display: grid;
+        grid-template-columns: 1.2fr 1.1fr 0.9fr 0.8fr;
+        grid-template-rows: 0.5fr;
+        gap: 36px;
+        grid-template-areas: 
+            "footer__contenedor__seguinos footer__contenedor__mediosDePago footer__contenedor__pedidos footer__contenedor__contactanos";
+    
+        .footer__contenedor__seguinos{
+            grid-area: footer__contenedor__seguinos;
+            display: flex;
+            .footer__contenedor__logo{
+                margin-right: 16px;
+                width: 40%;
+                display: inline-block;
+                img{
+                    width: 100%;
+                }
+            }
+            .footer__contenedor__redes{
+                padding-top: 16px;
+
+                .footer__contenedor__redes__seguinos{
+                    font-size: 1.4rem;
+                    margin-bottom: 8px;
+                    font-style: oblique;
+                }
+    
+                .footer__contenedor__redes__flex{
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    .footer__contenedor__redes__flex__iconoytexto{
+                        padding: 4px 0;
+                        display: flex;
+                        justify-content:space-between;
+                        width: 100%;
+                        img{
+                            display: inline-block;
+                            height: 32px;
+                        }
+                        p{
+                            margin: 4px 0 0 8px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__contenedor__mediosDePago{
+            grid-area: footer__contenedor__mediosDePago;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 16px;
+            .footer__contenedor__mediosDePago__titulo{
+                display: inline-block;
+                font-size: 1.3rem;
+            }
+            .contenedor__mediosDePago__opciones{
+                display: inline-block;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                .contenedor__mediosDePago__opciones__logo{
+                    display: inline-block;
+                    text-align: center;
+                    width: 33%;
+                    img{
+                        width: 40px;
+                    }
+                }
+            }
+
+        }
+        .footer__contenedor__pedidos{
+            grid-area: footer__contenedor__pedidos;
+            text-align: center;
+            padding-top: 16px;
+            .footer__contenedor__pedidos__titulo{
+                font-size: 1.3rem;
+            }
+        }
+        .footer__contenedor__contactanos{
+            grid-area: footer__contenedor__contactanos;
+            display: flex;
+            flex-direction: column;
+            .footer__contenedor__contactanos__titulo{
+                padding-top: 16px;
+                font-size: 1.3rem;
+            }
+            .footer__contenedor__contactanos__dias{
+                margin-bottom: 8px;
+            }
+            .footer__contenedor__contactanos__iconosytexto{
+                display: flex;
+                width: 100%;
+                img{
+                    display: inline-block;
+                    height: 32px;
+                }
+                p{
+                    display: block;
+                    margin: 6px 0 0 8px;
+                }
+            }
         }
     }
 }

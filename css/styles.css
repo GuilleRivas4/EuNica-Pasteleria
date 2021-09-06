@@ -65,7 +65,8 @@ header {
   top: 0;
   z-index: 2;
   box-shadow: 0 4px 8px rgba(90, 1, 1, 0.24);
-  font-family: "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
+  font-family: "Source Sans Pro", "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 400;
   font-stretch: condensed;
 }
 header .navbar-brand {
@@ -87,6 +88,10 @@ header .navbar-light .navbar-toggler {
 }
 header .navbar-light .navbar-toggler img {
   width: 24px;
+}
+header .dropdown-toggle-split {
+  padding-left: 0%;
+  color: white;
 }
 
 /*------------------ HOME ------------------*/
@@ -126,6 +131,10 @@ header .navbar-light .navbar-toggler img {
   font-size: 24px;
   font-weight: 600;
   text-align: center;
+  color: #8b8b8b;
+}
+.home__cards__productos a {
+  text-decoration: none;
 }
 .home__cards__productos .home__cards__productos--over:hover {
   transform: rotateY(360deg);
@@ -601,7 +610,7 @@ section .productos__mousses {
   grid-template-rows: 0.5fr;
   gap: 0px 36px;
   grid-auto-flow: row;
-  grid-template-areas: "productos__mousses__frutosRojos productos__mousses__choco productos__mousses__maracuya productos__mousses__tresChocolates";
+  grid-template-areas: "productos__mousses__frutosRojos productos__mousses__choco productos__mousses__chocoNaranja productos__mousses__tresChocolates";
   width: 100%;
   border-bottom: solid 2px #e6909f;
 }
@@ -611,8 +620,8 @@ section .productos__mousses .productos__mousses__frutosRojo {
 section .productos__mousses .productos__mousses__choco {
   grid-area: productos__mousses__choco;
 }
-section .productos__mousses .productos__mousses__maracuya {
-  grid-area: productos__mousses__maracuya;
+section .productos__mousses .productos__mousses__chocoNaranja {
+  grid-area: productos__mousses__chocoNaranja;
 }
 section .productos__mousses .productos__mousses__tresChocolates {
   grid-area: productos__mousses__tresChocolates;
@@ -692,6 +701,23 @@ section .productos__tortas .productos__tortas__selvaNegra {
   grid-area: productos__tortas__selvaNegra;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  aside {
+    display: none;
+  }
+
+  .productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr;
+    gap: 8px 36px;
+    grid-auto-flow: row;
+    grid-template-areas: "productos__budines__titulo" "productos__budines" "productos__cookies__titulo" "productos__cookies" "productos__cupcakes__titulo" "productos__cupcakes" "productos__macarons__titulo" "productos__macarons" "productos__mousses__titulo" "productos__mousses" "productos__shots__titulo" "productos__shots" "productos__tartas__titulo" "productos__tartas" "productos__tortas__titulo" "productos__tortas";
+    width: 100%;
+    height: 100%;
+    margin-bottom: 48px;
+  }
+}
 /*------------------ PRODUCTOS DETALLE ------------------*/
 .productos__detalle {
   margin-bottom: 16px;
@@ -951,7 +977,6 @@ section .productos__tortas .productos__tortas__selvaNegra {
 }
 /*------------------ CONTACTO ------------------*/
 .contacto__formulario {
-  width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -959,21 +984,6 @@ section .productos__tortas .productos__tortas__selvaNegra {
   flex-wrap: wrap;
   border: #fa92a5 solid;
   margin-bottom: 80px;
-  padding: 24px 0;
-}
-.contacto__formulario input, .contacto__formulario textarea {
-  margin: 0 36px;
-}
-.contacto__formulario .contacto__formulario__datos {
-  width: 40%;
-  margin-bottom: 24px;
-}
-.contacto__formulario .contacto__formulario__textarea {
-  width: 90%;
-  max-width: 90%;
-  min-width: 90%;
-  min-height: 56px;
-  max-height: 184px;
 }
 .contacto__formulario .contacto__formulario__datos, .contacto__formulario .contacto__formulario__textarea {
   background: none;
@@ -981,7 +991,6 @@ section .productos__tortas .productos__tortas__selvaNegra {
   outline: none;
   border-bottom: 1px solid;
   font-family: "Source Sans Pro", "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
-  font-size: 1rem;
   padding: 8px 0;
 }
 .contacto__formulario .contacto__formulario__boton__rehacer, .contacto__formulario .contacto__formulario__boton__enviar {
@@ -991,20 +1000,89 @@ section .productos__tortas .productos__tortas__selvaNegra {
   font-family: "Source Sans Pro", "Fira Sans", "Fira Sans Extra Condensed", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  height: 48px;
-  padding: 8px 32px;
-  margin: 20px 8px 40px 36px;
   color: white;
   background-color: #D83A56;
   border-radius: 10px;
   cursor: pointer;
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 540px) {
+  .contacto__formulario {
+    padding: 8px 0;
+    width: 100%;
+  }
+  .contacto__formulario input, .contacto__formulario textarea {
+    margin: 0;
+  }
   .contacto__formulario .contacto__formulario__datos, .contacto__formulario .contacto__formulario__textarea, .contacto__formulario .contacto__formulario__boton__rehacer, .contacto__formulario .contacto__formulario__boton__enviar {
-    width: 60%;
+    width: 70%;
+  }
+  .contacto__formulario .contacto__formulario__datos, .contacto__formulario .contacto__formulario__textarea {
+    font-size: 0.8rem;
+  }
+  .contacto__formulario .contacto__formulario__boton__rehacer {
+    height: 48px;
+    padding: 8px 32px;
+    margin: 32px 8px 0px 8px;
+  }
+  .contacto__formulario .contacto__formulario__boton__enviar {
+    height: 48px;
+    padding: 8px 32px;
+    margin: 24px 8px 32px 8px;
   }
 }
-
+@media only screen and (min-width: 540px) and (max-width: 1070px) {
+  .contacto__formulario {
+    padding: 24px 0;
+    width: 90%;
+  }
+  .contacto__formulario input, .contacto__formulario textarea {
+    margin: 0 36px;
+  }
+  .contacto__formulario .contacto__formulario__datos, .contacto__formulario .contacto__formulario__textarea, .contacto__formulario .contacto__formulario__boton__rehacer, .contacto__formulario .contacto__formulario__boton__enviar {
+    width: 70%;
+  }
+  .contacto__formulario .contacto__formulario__datos, .contacto__formulario .contacto__formulario__textarea {
+    font-size: 0.95rem;
+  }
+  .contacto__formulario .contacto__formulario__boton__rehacer {
+    height: 48px;
+    padding: 8px 32px;
+    margin: 48px 8px 0px 8px;
+  }
+  .contacto__formulario .contacto__formulario__boton__enviar {
+    height: 48px;
+    padding: 8px 32px;
+    margin: 24px 8px 32px 8px;
+  }
+}
+@media only screen and (min-width: 1070px) {
+  .contacto__formulario {
+    padding: 24px 0;
+    width: 80%;
+  }
+  .contacto__formulario input, .contacto__formulario textarea {
+    margin: 0 36px;
+  }
+  .contacto__formulario .contacto__formulario__datos {
+    width: 40%;
+    margin-bottom: 24px;
+    font-size: 1rem;
+  }
+  .contacto__formulario .contacto__formulario__textarea {
+    width: 90%;
+    max-width: 90%;
+    min-width: 90%;
+    min-height: 56px;
+    max-height: 184px;
+    font-size: 1rem;
+  }
+  .contacto__formulario .contacto__formulario__boton__rehacer, .contacto__formulario .contacto__formulario__boton__enviar {
+    height: 48px;
+    padding: 8px 32px;
+    margin: 20px 8px 40px 36px;
+  }
+}
 /*------------------ MAPA DEL SITIO ------------------*/
 .mapaDelSitio ul {
   margin-left: 40px;
@@ -1022,27 +1100,367 @@ section .productos__tortas .productos__tortas__selvaNegra {
 footer {
   background-color: #D83A56;
   color: white;
-  padding: 20px;
+  padding: 20px 0;
+  font-weight: 400;
 }
-footer .footer__redes__titulo {
-  color: #DEEDF0;
-  margin-bottom: 8px;
-}
-footer .footer__redes__info {
-  display: flex;
-  flex-direction: column;
-}
-footer .footer__redes__info p {
-  display: inline-block;
-}
-footer .footer__redes__info .footer__redes__iconos {
-  height: 24px;
-  width: 24px;
-  margin-right: 8px;
-}
-footer .footer__redes__info a {
-  text-decoration: none;
+footer p {
   color: white;
-  margin-left: 36px;
-  font-style: oblique;
+  font-size: 0.85rem;
+}
+
+@media only screen and (max-width: 645px) {
+  .footer__contenedor__grilla {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos {
+    display: flex;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__logo {
+    display: none;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes {
+    padding-top: 16px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__seguinos {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-style: oblique;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto {
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto img {
+    display: inline-block;
+    height: 32px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto p {
+    margin: 4px 0 0 8px;
+    display: block;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago {
+    display: none;
+  }
+  .footer__contenedor__grilla .footer__contenedor__pedidos {
+    display: none;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__titulo {
+    padding-top: 16px;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__dias {
+    display: none;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto {
+    display: flex;
+    width: 100%;
+    margin-top: 6px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto img {
+    display: inline-block;
+    height: 32px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto p {
+    display: block;
+    margin: 6px 0 0 8px;
+  }
+}
+@media only screen and (min-width: 645px) and (max-width: 970px) {
+  .footer__contenedor__grilla {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 0.5fr;
+    gap: 24px;
+    grid-template-areas: "footer__contenedor__seguinos footer__contenedor__contactanos";
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos {
+    grid-area: footer__contenedor__seguinos;
+    display: flex;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__logo {
+    margin-right: 16px;
+    width: 30%;
+    display: inline-block;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__logo img {
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes {
+    padding-top: 16px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__seguinos {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    font-style: oblique;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto {
+    padding: 2px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto img {
+    display: inline-block;
+    height: 28px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto p {
+    margin: 4px 0 0 8px;
+    display: block;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago {
+    display: none;
+  }
+  .footer__contenedor__grilla .footer__contenedor__pedidos {
+    display: none;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos {
+    grid-area: footer__contenedor__contactanos;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__titulo {
+    padding-top: 16px;
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__dias {
+    margin-bottom: 2px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto {
+    display: flex;
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto img {
+    display: inline-block;
+    height: 28px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto p {
+    display: block;
+    margin: 6px 0 0 8px;
+  }
+}
+@media only screen and (min-width: 970px) and (max-width: 1150px) {
+  .footer__contenedor__grilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr;
+    gap: 36px;
+    grid-template-areas: "footer__contenedor__seguinos footer__contenedor__mediosDePago footer__contenedor__contactanos";
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos {
+    grid-area: footer__contenedor__seguinos;
+    display: flex;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__logo {
+    margin-right: 16px;
+    width: 40%;
+    display: inline-block;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__logo img {
+    width: 100%;
+    min-width: 80px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes {
+    padding-top: 16px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__seguinos {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-style: oblique;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto {
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto img {
+    display: inline-block;
+    height: 28px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto p {
+    margin: 4px 0 0 8px;
+    display: block;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago {
+    grid-area: footer__contenedor__mediosDePago;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 16px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago .footer__contenedor__mediosDePago__titulo {
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago .contenedor__mediosDePago__opciones {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago .contenedor__mediosDePago__opciones .contenedor__mediosDePago__opciones__logo {
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago .contenedor__mediosDePago__opciones .contenedor__mediosDePago__opciones__logo img {
+    width: 36px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__pedidos {
+    display: none;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos {
+    grid-area: footer__contenedor__contactanos;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__titulo {
+    padding-top: 16px;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__dias {
+    margin-bottom: 8px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto {
+    display: flex;
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto img {
+    display: inline-block;
+    height: 28px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto p {
+    display: block;
+    margin: 6px 0 0 8px;
+  }
+}
+@media only screen and (min-width: 1150px) {
+  .footer__contenedor__grilla {
+    display: grid;
+    grid-template-columns: 1.2fr 1.1fr 0.9fr 0.8fr;
+    grid-template-rows: 0.5fr;
+    gap: 36px;
+    grid-template-areas: "footer__contenedor__seguinos footer__contenedor__mediosDePago footer__contenedor__pedidos footer__contenedor__contactanos";
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos {
+    grid-area: footer__contenedor__seguinos;
+    display: flex;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__logo {
+    margin-right: 16px;
+    width: 40%;
+    display: inline-block;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__logo img {
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes {
+    padding-top: 16px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__seguinos {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-style: oblique;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto {
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto img {
+    display: inline-block;
+    height: 32px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__seguinos .footer__contenedor__redes .footer__contenedor__redes__flex .footer__contenedor__redes__flex__iconoytexto p {
+    margin: 4px 0 0 8px;
+    display: block;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago {
+    grid-area: footer__contenedor__mediosDePago;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 16px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago .footer__contenedor__mediosDePago__titulo {
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago .contenedor__mediosDePago__opciones {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago .contenedor__mediosDePago__opciones .contenedor__mediosDePago__opciones__logo {
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__mediosDePago .contenedor__mediosDePago__opciones .contenedor__mediosDePago__opciones__logo img {
+    width: 40px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__pedidos {
+    grid-area: footer__contenedor__pedidos;
+    text-align: center;
+    padding-top: 16px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__pedidos .footer__contenedor__pedidos__titulo {
+    font-size: 1.3rem;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos {
+    grid-area: footer__contenedor__contactanos;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__titulo {
+    padding-top: 16px;
+    font-size: 1.3rem;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__dias {
+    margin-bottom: 8px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto {
+    display: flex;
+    width: 100%;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto img {
+    display: inline-block;
+    height: 32px;
+  }
+  .footer__contenedor__grilla .footer__contenedor__contactanos .footer__contenedor__contactanos__iconosytexto p {
+    display: block;
+    margin: 6px 0 0 8px;
+  }
 }/*# sourceMappingURL=styles.css.map */

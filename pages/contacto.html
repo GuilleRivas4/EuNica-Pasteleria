@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg padding__contenido">
             <a class="navbar-brand" href="../index.html"><img src="../multimedia/iconos/logo.svg" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span><img src="../multimedia/iconos/menu_white_24dp.svg" alt=""></span>
             </button>
             <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -27,14 +27,21 @@
                         <a class="nav-link text-white" href="../index.html">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="productos.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="productos.html">Tortas</a>
-                            <a class="dropdown-item" href="productos.html">Cupcakes</a>
-                            <a class="dropdown-item" href="productos.html">Macarons</a>
-                            <a class="dropdown-item" href="productos.html">Shots</a>
-                            <a class="dropdown-item" href="productos.html">Budines</a>
-                            <a class="dropdown-item" href="productos.html">Tartas</a>
+                        <div class="btn-group">
+                            <a class="nav-link text-white" href="productos.html">Productos</a>
+                            <button type="button" class="btn bg dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu bg aria-labelledby="navbarDropdownMenuLink"">
+                                <a class="dropdown-item text-white" href="productos.html#budines">Budines</a>
+                                <a class="dropdown-item text-white" href="productos.html#cookies">Cookies</a>
+                                <a class="dropdown-item text-white" href="productos.html#cupcakes">Cupcakes</a>
+                                <a class="dropdown-item text-white" href="productos.html#macarons">Macarons</a>
+                                <a class="dropdown-item text-white" href="productos.html#mousses">Mousses</a>
+                                <a class="dropdown-item text-white" href="productos.html#shots">Shots</a>
+                                <a class="dropdown-item text-white" href="productos.html#tartas">Tartas</a>
+                                <a class="dropdown-item text-white" href="productos.html#tortas">Tortas</a>
+                            </div>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -68,27 +75,60 @@
         </div>
     </section>
     <footer>
-        <div class="padding__contenido">
-            <h2 class="footer__redes__titulo">Contactanos</h2>
-            <div class="footer__redes__info">
-                <div>
-                    <img src="../multimedia\iconos/whatsapp.svg" alt="" class="footer__redes__iconos">
-                    <p>+51 9 221 123 4567</p>
+        <div class="padding__contenido footer__contenedor__grilla">
+            <div class="footer__contenedor__seguinos">
+                <div class="footer__contenedor__logo">
+                    <img src="../multimedia/iconos/logo_footer.svg" alt="">
                 </div>
-                <div>
-                    <img src="../multimedia/iconos/instagram.svg" alt="" class="footer__redes__iconos">
-                    <p>@nombre.instagram</p>
+                <div class="footer__contenedor__redes">
+                    <p class="footer__contenedor__redes__seguinos">¡Seguinos!</p>
+                    <div class="footer__contenedor__redes__flex">
+                        <div class="footer__contenedor__redes__flex__iconoytexto">
+                            <img src="../multimedia/iconos/instagram.svg" alt="" class="footer__redes__iconos">
+                            <p>@eunicapasteleria</p>
+                        </div>
+                        <div class="footer__contenedor__redes__flex__iconoytexto">
+                            <img src="../multimedia/iconos/facebook.svg" alt="" class="footer__redes__iconos">
+                            <p>@eunicaPasteleria</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
+            </div>
+            <div class="footer__contenedor__mediosDePago">
+                <p class="footer__contenedor__mediosDePago__titulo">Medios de pago</p>
+                <div class="contenedor__mediosDePago__opciones">
+                    <div class="contenedor__mediosDePago__opciones__logo">
+                        <img src="../multimedia/iconos/transferencia.svg" alt="" class="footer__redes__iconos">
+                        <p>Transferencia</p>
+                    </div>
+                    <div class="contenedor__mediosDePago__opciones__logo">
+                        <img src="../multimedia/iconos/efectivo.svg" alt="" class="footer__redes__iconos">
+                        <p>Efectivo</p>
+                    </div>
+                    <div class="contenedor__mediosDePago__opciones__logo">
+                        <img src="../multimedia/iconos/mercadopago.svg" alt="" class="footer__redes__iconos">
+                        <p>Mercado Pago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__contenedor__pedidos">
+                <p class="footer__contenedor__pedidos__titulo">Pedidos</p>
+                <p>Pedidios con 72hs de anticipación</p>
+                <p>¡Contactanos por nuestras redes sociales o por whatsapp!</p>
+            </div>
+            <div class="footer__contenedor__contactanos">
+                <p class="footer__contenedor__contactanos__titulo">Contactanos</p>
+                <p class="footer__contenedor__contactanos__dias">Lun a Sáb de 9 a 18hs</p>
+                <div class="footer__contenedor__contactanos__iconosytexto">
+                    <img src="../multimedia/iconos/whatsapp.svg" alt="" class="footer__redes__iconos">
+                    <p>+54 221 555 1234</p>
+                </div>
+                <div class="footer__contenedor__contactanos__iconosytexto">
                     <img src="../multimedia/iconos/email.svg" alt="" class="footer__redes__iconos">
-                    <p>proyectocoderhouse@gmail.com</p>
-                </div>
-                <div>
-                    <a href="mapaDelSitio.html">Mapa del sitio</a>
+                    <p>@eunicapasteleria@gmail.com</p>
                 </div>
             </div>
         </div>
-
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

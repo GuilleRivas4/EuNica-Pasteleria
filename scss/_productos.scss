@@ -71,7 +71,6 @@ section{
             box-shadow: 0.5px 2px 1px rgba(90, 1, 1, 0.24);
             margin-bottom: 32px;
         }
-
         display: grid;
         grid-template-columns: 1fr 5fr;
         grid-template-rows: 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr;
@@ -183,13 +182,13 @@ section{
         gap: 0px 36px;
         grid-auto-flow: row;
         grid-template-areas:
-        "productos__mousses__frutosRojos productos__mousses__choco productos__mousses__maracuya productos__mousses__tresChocolates";
+        "productos__mousses__frutosRojos productos__mousses__choco productos__mousses__chocoNaranja productos__mousses__tresChocolates";
         width: 100%;
         border-bottom: solid 2px #e6909f;
 
         .productos__mousses__frutosRojo { grid-area: productos__mousses__frutosRojo;}
         .productos__mousses__choco { grid-area: productos__mousses__choco;}
-        .productos__mousses__maracuya { grid-area: productos__mousses__maracuya;}
+        .productos__mousses__chocoNaranja { grid-area: productos__mousses__chocoNaranja;}
         .productos__mousses__tresChocolates { grid-area: productos__mousses__tresChocolates;}
     }
 
@@ -244,4 +243,40 @@ section{
         .productos__tortas__redVelvet { grid-area: productos__tortas__redVelvet;}
         .productos__tortas__selvaNegra { grid-area: productos__tortas__selvaNegra;}
     }
+
+
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    aside{
+        display: none;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr;
+        gap: 8px 36px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "productos__budines__titulo"
+        "productos__budines"
+        "productos__cookies__titulo"
+        "productos__cookies"
+        "productos__cupcakes__titulo"
+        "productos__cupcakes"
+        "productos__macarons__titulo"
+        "productos__macarons"
+        "productos__mousses__titulo"
+        "productos__mousses"
+        "productos__shots__titulo"
+        "productos__shots"
+        "productos__tartas__titulo"
+        "productos__tartas"
+        "productos__tortas__titulo"
+        "productos__tortas";
+        width: 100%;
+        height: 100%;
+        margin-bottom: 48px;
+        
+    }
+
 }

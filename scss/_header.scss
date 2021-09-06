@@ -4,7 +4,8 @@ header{
     top: 0;
     z-index: 2;
     box-shadow: 0 4px 8px rgba(90, 1, 1, 0.24);
-    font-family: 'Fira Sans','Fira Sans Extra Condensed', sans-serif;
+    font-family: 'Source Sans Pro','Fira Sans','Fira Sans Extra Condensed', sans-serif;
+    font-weight: 400;
     font-stretch:condensed;
 
     .navbar-brand {
@@ -28,5 +29,9 @@ header{
         img{
             width: 24px;
         }
+    }
+    .dropdown-toggle-split{
+        padding-left: 0%;
+        color: white;
     }
 }
