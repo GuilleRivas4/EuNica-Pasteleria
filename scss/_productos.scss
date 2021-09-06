@@ -71,9 +71,10 @@ section{
             box-shadow: 0.5px 2px 1px rgba(90, 1, 1, 0.24);
             margin-bottom: 32px;
         }
+
         display: grid;
         grid-template-columns: 1fr 5fr;
-        grid-template-rows: 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr;
+        grid-template-rows:repeat(16, auto);
         gap: 8px 36px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -96,151 +97,665 @@ section{
         width: 100%;
         height: 100%;
         margin-bottom: 48px;
-    }
 
-    .productos__aside { grid-area: productos__aside; 
-    background-color: #ffe3e8;
-    padding: 16px;
-    }
-
-    .productos__budines__titulo { grid-area: productos__budines__titulo; }
-    .productos__cookies__titulo { grid-area: productos__cookies__titulo; }
-    .productos__cupcakes__titulo { grid-area: productos__cupcakes__titulo; }
-    .productos__macarons__titulo { grid-area: productos__macarons__titulo; }
-    .productos__mousses__titulo { grid-area: productos__mousses__titulo; }
-    .productos__shots__titulo { grid-area: productos__shots__titulo; }
-    .productos__tartas__titulo { grid-area: productos__tartas__titulo; }
-    .productos__tortas__titulo { grid-area: productos__tortas__titulo; }
-
-    .productos__budines { grid-area: productos__budines; 
+        .productos__aside { grid-area: productos__aside; 
+            background-color: #ffe3e8;
+            padding: 16px;
+            }
+        
+            .productos__budines__titulo { grid-area: productos__budines__titulo; }
+            .productos__cookies__titulo { grid-area: productos__cookies__titulo; }
+            .productos__cupcakes__titulo { grid-area: productos__cupcakes__titulo; }
+            .productos__macarons__titulo { grid-area: productos__macarons__titulo; }
+            .productos__mousses__titulo { grid-area: productos__mousses__titulo; }
+            .productos__shots__titulo { grid-area: productos__shots__titulo; }
+            .productos__tartas__titulo { grid-area: productos__tartas__titulo; }
+            .productos__tortas__titulo { grid-area: productos__tortas__titulo; }
+        
+            .productos__budines, .productos__cookies, .productos__cupcakes, .productos__macarons, .productos__mousses, .productos__shots, .productos__tartas  { 
+                border-bottom: solid 2px #e6909f;
+            }
+        
+        @media only screen and (min-width: 600px) and (max-width: 867px){
         display: grid;
-        grid-template-columns:repeat(5, 1fr);
-        grid-template-rows: 0.5fr;
-        gap: 0px 36px;
+        grid-template-columns: 2fr 4fr;
+        grid-template-rows:repeat(16, auto);
+        gap: 8px 36px;
         grid-auto-flow: row;
         grid-template-areas:
-        "productos__budines__limon productos__budines__hamburgues productos__budines__ingles productos__budines__marmolado";
-        width: 100%;
-        border-bottom: solid 2px #e6909f;
+        "productos__aside productos__budines__titulo"
+        "productos__aside productos__budines"
+        "productos__aside productos__cookies__titulo"
+        "productos__aside productos__cookies"
+        "productos__aside productos__cupcakes__titulo"
+        "productos__aside productos__cupcakes"
+        "productos__aside productos__macarons__titulo"
+        "productos__aside productos__macarons"
+        "productos__aside productos__mousses__titulo"
+        "productos__aside productos__mousses"
+        "productos__aside productos__shots__titulo"
+        "productos__aside productos__shots"
+        "productos__aside productos__tartas__titulo"
+        "productos__aside productos__tartas"
+        "productos__aside productos__tortas__titulo"
+        "productos__aside productos__tortas";
+        }
+        @media only screen and (max-width: 740px){
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:repeat(16, auto);
+            gap: 8px 36px;
+            grid-auto-flow: row;
+            grid-template-areas:
+            "productos__budines__titulo"
+            "productos__budines"
+            "productos__cookies__titulo"
+            "productos__cookies"
+            "productos__cupcakes__titulo"
+            "productos__cupcakes"
+            "productos__macarons__titulo"
+            "productos__macarons"
+            "productos__mousses__titulo"
+            "productos__mousses"
+            "productos__shots__titulo"
+            "productos__shots"
+            "productos__tartas__titulo"
+            "productos__tartas"
+            "productos__tortas__titulo"
+            "productos__tortas";
 
-        .productos__budines__limon { grid-area: productos__budines__limon;}
-        .productos__budines__hamburgues { grid-area: productos__budines__hamburgues;}
-        .productos__budines__ingles { grid-area: productos__budines__ingles;}
-        .productos__budines__marmolado { grid-area: productos__budines__marmolado;}
+            .productos__aside{
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+
+    .productos__budines {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__budines__limon, .productos__budines__hamburgues, .productos__budines__ingles, .productos__budines__marmolado {
+            display: block;
+            width: 100%;
+        }
     }
 
-    .productos__cookies { grid-area: productos__cookies; 
-        display: grid;
-        grid-template-columns:repeat(5, 1fr);
-        grid-template-rows: 0.5fr;
-        gap: 0px 36px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "productos__cookies__decoradas";
+    .productos__cookies { 
+        display: flex;
         width: 100%;
-        border-bottom: solid 2px #e6909f;
-
-        .productos__cookies__decoradas { grid-area: productos__cookies__decoradas;}
+        .productos__cookies__decoradas {
+            display: block;
+            width: 100%;
+        }
     }
 
-    .productos__cupcakes { grid-area: productos__cupcakes; 
-        display: grid;
-        grid-template-columns:repeat(5, 1fr);
-        grid-template-rows: 0.5fr;
-        gap: 0px 36px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "productos__cupcakes__chocolate productos__cupcakes__vainilla productos__cupcakes__marmolado";
+    .productos__cupcakes {         
+        display: flex;
         width: 100%;
-        border-bottom: solid 2px #e6909f;
-
-        .productos__cupcakes__chocolate { grid-area: productos__cupcakes__chocolate;}
-        .productos__cupcakes__vainilla { grid-area: productos__cupcakes__vainilla;}
-        .productos__cupcakes__marmolado { grid-area: productos__cupcakes__marmolado;}
+        flex-wrap: wrap;
+        .productos__cupcakes__chocolate, .productos__cupcakes__vainilla, .productos__cupcakes__marmolado { 
+            display: block;
+            width: 100%;
+        }
     }
 
-    .productos__macarons { grid-area: productos__macarons; 
-        display: grid;
-        grid-template-columns:repeat(5, 1fr);
-        grid-template-rows: 0.5fr;
-        gap: 0px 36px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "productos__macarons__7unidades productos__macarons__12unidades productos__macarons__24unidades";
+    .productos__macarons { 
+        display: flex;
         width: 100%;
-        border-bottom: solid 2px #e6909f;
-
-        .productos__macarons__7unidades { grid-area: productos__macarons__7unidades;}
-        .productos__macarons__12unidades { grid-area: productos__macarons__12unidades;}
-        .productos__macarons__24unidades { grid-area: productos__macarons__24unidades;}
+        flex-wrap: wrap;
+        .productos__macarons__7unidades, .productos__macarons__12unidades, .productos__macarons__24unidades {
+            display: block;
+            width: 100%;
+        }
     }
 
-    .productos__mousses { grid-area: productos__mousses; 
-        display: grid;
-        grid-template-columns:repeat(5, 1fr);
-        grid-template-rows: 0.5fr;
-        gap: 0px 36px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "productos__mousses__frutosRojos productos__mousses__choco productos__mousses__chocoNaranja productos__mousses__tresChocolates";
+    .productos__mousses { 
+        display: flex;
         width: 100%;
-        border-bottom: solid 2px #e6909f;
-
-        .productos__mousses__frutosRojo { grid-area: productos__mousses__frutosRojo;}
-        .productos__mousses__choco { grid-area: productos__mousses__choco;}
-        .productos__mousses__chocoNaranja { grid-area: productos__mousses__chocoNaranja;}
-        .productos__mousses__tresChocolates { grid-area: productos__mousses__tresChocolates;}
+        flex-wrap: wrap;
+        .productos__mousses__frutosRojos, .productos__mousses__choco, .productos__mousses__chocoNaranja, .productos__mousses__tresChocolates { 
+            display: block;
+            width: 100%;
+        }
     }
 
-    .productos__shots { grid-area: productos__shots; 
-        display: grid;
-        grid-template-columns:repeat(5, 1fr);
-        grid-template-rows: 0.5fr;
-        gap: 0px 36px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "productos__shots__frutosRojo productos__shots__chocoBlanco productos__shots__dulceDeLeche productos__shots__frambuesa productos__shots__lemonpie";
+    .productos__shots {
+        display: flex;
         width: 100%;
-        border-bottom: solid 2px #e6909f;
-
-        .productos__shots__frutosRojo { grid-area: productos__shots__frutosRojo;}
-        .productos__shots__chocoBlanco { grid-area: productos__shots__chocoBlanco;}
-        .productos__shots__dulceDeLeche { grid-area: productos__shots__dulceDeLeche;}
-        .productos__shots__frambuesa { grid-area: productos__shots__frambuesa;}
-        .productos__shots__lemonpie { grid-area: productos__shots__lemonpie;}
+        flex-wrap: wrap;
+        .productos__shots__frutosRojos, .productos__shots__chocoBlanco, .productos__shots__dulceDeLeche, .productos__shots__frambuesa, .productos__shots__lemonpie { 
+            display: block;
+            width: 100%;
+        }
     }
     
-    .productos__tartas { grid-area: productos__tartas; 
-        display: grid;
-        grid-template-columns:repeat(5, 1fr);
-        grid-template-rows: 0.5fr;
-        gap: 0px 36px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "productos__tartas__cheesecake productos__tartas__crumble productos__tartas__frutilla productos__tartas__lemonpie productos__tartas__toffee";
+    .productos__tartas { 
+        display: flex;
         width: 100%;
-        border-bottom: solid 2px #e6909f;
-
-        .productos__tartas__cheesecake { grid-area: productos__tartas__cheesecake;}
-        .productos__tartas__crumble { grid-area: productos__tartas__crumble;}
-        .productos__tartas__frutilla { grid-area: productos__tartas__frutilla;}
-        .productos__tartas__lemonpie { grid-area: productos__tartas__lemonpie;}
-        .productos__tartas__toffee { grid-area: productos__tartas__toffee;}
+        flex-wrap: wrap;
+        .productos__tartas__cheesecake, .productos__tartas__crumble, .productos__tartas__frutillas, .productos__tartas__lemonpie, .productos__tartas__toffee {             
+            display: block;
+            width: 100%;
+        }
     }
 
-    .productos__tortas { grid-area: productos__tortas; 
-        display: grid;
-        grid-template-columns:repeat(5, 1fr);
-        grid-template-rows: 0.5fr;
-        gap: 0px 36px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "productos__tortas__carrot productos__tortas__dobleChoco productos__tortas__redVelvet productos__tortas__selvaNegra";
+    .productos__tortas { 
+        display: flex;
         width: 100%;
+        flex-wrap: wrap;
+        .productos__tortas__carrot, .productos__tortas__dobleChoco, .productos__tortas__redVelvet, .productos__tortas__selvaNegra { 
+            display: block;
+            width: 100%;
+        }
+    }
+}
 
-        .productos__tortas__carrot { grid-area: productos__tortas__carrot;}
-        .productos__tortas__dobleChoco { grid-area: productos__tortas__dobleChoco;}
-        .productos__tortas__redVelvet { grid-area: productos__tortas__redVelvet;}
-        .productos__tortas__selvaNegra { grid-area: productos__tortas__selvaNegra;}
+@media only screen and (min-width: 460px) and (max-width: 740px){
+
+    .productos__budines {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__budines__limon, .productos__budines__hamburgues, .productos__budines__ingles, .productos__budines__marmolado {
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cookies { 
+        display: flex;
+        width: 100%;
+        .productos__cookies__decoradas {
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cupcakes {         
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__cupcakes__chocolate, .productos__cupcakes__vainilla, .productos__cupcakes__marmolado { 
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__macarons { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__macarons__7unidades, .productos__macarons__12unidades, .productos__macarons__24unidades {
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__mousses { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__mousses__frutosRojos, .productos__mousses__choco, .productos__mousses__chocoNaranja, .productos__mousses__tresChocolates { 
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__shots {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__shots__frutosRojos, .productos__shots__chocoBlanco, .productos__shots__dulceDeLeche, .productos__shots__frambuesa, .productos__shots__lemonpie { 
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+    
+    .productos__tartas { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__tartas__cheesecake, .productos__tartas__crumble, .productos__tartas__frutillas, .productos__tartas__lemonpie, .productos__tartas__toffee {             
+            display: block;
+            width: 50%;
+            padding-right: 32px;}
+    }
+
+    .productos__tortas { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__tortas__carrot, .productos__tortas__dobleChoco, .productos__tortas__redVelvet, .productos__tortas__selvaNegra { 
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 740px){
+
+    .productos__budines {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__budines__limon, .productos__budines__hamburgues, .productos__budines__ingles, .productos__budines__marmolado {
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cookies { 
+        display: flex;
+        width: 100%;
+        .productos__cookies__decoradas {
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cupcakes {         
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__cupcakes__chocolate, .productos__cupcakes__vainilla, .productos__cupcakes__marmolado { 
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__macarons { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__macarons__7unidades, .productos__macarons__12unidades, .productos__macarons__24unidades {
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__mousses { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__mousses__frutosRojos, .productos__mousses__choco, .productos__mousses__chocoNaranja, .productos__mousses__tresChocolates { 
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__shots {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__shots__frutosRojos, .productos__shots__chocoBlanco, .productos__shots__dulceDeLeche, .productos__shots__frambuesa, .productos__shots__lemonpie { 
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+    
+    .productos__tartas { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__tartas__cheesecake, .productos__tartas__crumble, .productos__tartas__frutillas, .productos__tartas__lemonpie, .productos__tartas__toffee {             
+            display: block;
+            width: 33%;
+            padding-right: 32px;}
+    }
+
+    .productos__tortas { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__tortas__carrot, .productos__tortas__dobleChoco, .productos__tortas__redVelvet, .productos__tortas__selvaNegra { 
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 740px) and (max-width: 867px){
+
+    .productos__budines {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__budines__limon, .productos__budines__hamburgues, .productos__budines__ingles, .productos__budines__marmolado {
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cookies { 
+        display: flex;
+        width: 100%;
+        .productos__cookies__decoradas {
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cupcakes {         
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__cupcakes__chocolate, .productos__cupcakes__vainilla, .productos__cupcakes__marmolado { 
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__macarons { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__macarons__7unidades, .productos__macarons__12unidades, .productos__macarons__24unidades {
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__mousses { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__mousses__frutosRojos, .productos__mousses__choco, .productos__mousses__chocoNaranja, .productos__mousses__tresChocolates { 
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__shots {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__shots__frutosRojos, .productos__shots__chocoBlanco, .productos__shots__dulceDeLeche, .productos__shots__frambuesa, .productos__shots__lemonpie { 
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+    
+    .productos__tartas { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__tartas__cheesecake, .productos__tartas__crumble, .productos__tartas__frutillas, .productos__tartas__lemonpie, .productos__tartas__toffee {             
+            display: block;
+            width: 50%;
+            padding-right: 32px;}
+    }
+
+    .productos__tortas { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__tortas__carrot, .productos__tortas__dobleChoco, .productos__tortas__redVelvet, .productos__tortas__selvaNegra { 
+            display: block;
+            width: 50%;
+            padding-right: 32px;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 867px) and (max-width: 1085px){
+    .productos__budines {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__budines__limon, .productos__budines__hamburgues, .productos__budines__ingles, .productos__budines__marmolado {
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cookies { 
+        display: flex;
+        width: 100%;
+        .productos__cookies__decoradas {
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cupcakes {         
+        display: flex;
+        .productos__cupcakes__chocolate, .productos__cupcakes__vainilla, .productos__cupcakes__marmolado { 
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__macarons { 
+        display: flex;
+        .productos__macarons__7unidades, .productos__macarons__12unidades, .productos__macarons__24unidades {
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__mousses { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__mousses__frutosRojos, .productos__mousses__choco, .productos__mousses__chocoNaranja, .productos__mousses__tresChocolates { 
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__shots {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__shots__frutosRojos, .productos__shots__chocoBlanco, .productos__shots__dulceDeLeche, .productos__shots__frambuesa, .productos__shots__lemonpie { 
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+    
+    .productos__tartas { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__tartas__cheesecake, .productos__tartas__crumble, .productos__tartas__frutillas, .productos__tartas__lemonpie, .productos__tartas__toffee {             
+            display: block;
+            width: 33%;
+            padding-right: 32px;}
+    }
+
+    .productos__tortas { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__tortas__carrot, .productos__tortas__dobleChoco, .productos__tortas__redVelvet, .productos__tortas__selvaNegra { 
+            display: block;
+            width: 33%;
+            padding-right: 32px;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1085px) and (max-width: 1225px){
+    .productos__budines {
+        display: flex;
+        .productos__budines__limon, .productos__budines__hamburgues, .productos__budines__ingles, .productos__budines__marmolado {
+            display: block;
+            width: 25%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cookies { 
+        display: flex;
+        .productos__cookies__decoradas {
+            display: block;
+            width: 25%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cupcakes {         
+        display: flex;
+        .productos__cupcakes__chocolate, .productos__cupcakes__vainilla, .productos__cupcakes__marmolado { 
+            display: block;
+            width: 25%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__macarons { 
+        display: flex;
+        .productos__macarons__7unidades, .productos__macarons__12unidades, .productos__macarons__24unidades {
+            display: block;
+            width: 25%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__mousses { 
+        display: flex;
+        .productos__mousses__frutosRojos, .productos__mousses__choco, .productos__mousses__chocoNaranja, .productos__mousses__tresChocolates { 
+            display: block;
+            width: 25%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__shots {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__shots__frutosRojos, .productos__shots__chocoBlanco, .productos__shots__dulceDeLeche, .productos__shots__frambuesa, .productos__shots__lemonpie { 
+            display: block;
+            width: 25%;
+            padding-right: 32px;
+        }
+    }
+    
+    .productos__tartas { 
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        .productos__tartas__cheesecake, .productos__tartas__crumble, .productos__tartas__frutillas, .productos__tartas__lemonpie, .productos__tartas__toffee {             
+            display: block;
+            width: 25%;
+            padding-right: 32px;}
+    }
+
+    .productos__tortas { 
+        display: flex;
+        .productos__tortas__carrot, .productos__tortas__dobleChoco, .productos__tortas__redVelvet, .productos__tortas__selvaNegra { 
+            display: block;
+            width: 25%;
+            padding-right: 32px;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1225px){
+    .productos__budines {
+        display: flex;
+        .productos__budines__limon, .productos__budines__hamburgues, .productos__budines__ingles, .productos__budines__marmolado {
+            display: block;
+            width: 20%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cookies { 
+        display: flex;
+        .productos__cookies__decoradas {
+            display: block;
+            width: 20%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__cupcakes {         
+        display: flex;
+        .productos__cupcakes__chocolate, .productos__cupcakes__vainilla, .productos__cupcakes__marmolado { 
+            display: block;
+            width: 20%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__macarons { 
+        display: flex;
+        .productos__macarons__7unidades, .productos__macarons__12unidades, .productos__macarons__24unidades {
+            display: block;
+            width: 20%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__mousses { 
+        display: flex;
+        .productos__mousses__frutosRojos, .productos__mousses__choco, .productos__mousses__chocoNaranja, .productos__mousses__tresChocolates { 
+            display: block;
+            width: 20%;
+            padding-right: 32px;
+        }
+    }
+
+    .productos__shots {
+        display: flex;
+        .productos__shots__frutosRojos, .productos__shots__chocoBlanco, .productos__shots__dulceDeLeche, .productos__shots__frambuesa, .productos__shots__lemonpie { 
+            display: block;
+            width: 20%;
+            padding-right: 32px;
+        }
+    }
+    
+    .productos__tartas { 
+        display: flex;
+
+        .productos__tartas__cheesecake, .productos__tartas__crumble, .productos__tartas__frutillas, .productos__tartas__lemonpie, .productos__tartas__toffee {             
+            display: block;
+            width: 20%;
+            padding-right: 32px;}
+    }
+
+    .productos__tortas { 
+        display: flex;
+
+        .productos__tortas__carrot, .productos__tortas__dobleChoco, .productos__tortas__redVelvet, .productos__tortas__selvaNegra { 
+            display: block;
+            width: 20%;
+            padding-right: 32px;
+        }
     }
 }
