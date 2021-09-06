@@ -1,0 +1,221 @@
+/*------------------ PRODUCTOS ------------------*/
+
+section{
+    .productos {
+        a{
+            text-decoration: none;
+        }
+        ul{
+            position: sticky;
+            top: 80px;
+            
+            li{
+                list-style: none;
+                margin: 16px 0;
+                font-weight: 600;
+
+                a{
+                    color: #8b8b8b;
+                    margin-left: 16px;
+                }
+            }
+            h2{
+                font-size: 1.5rem;
+                font-weight: 700;           
+            }
+        }
+        
+        h3 {
+            font-weight: 700;
+            padding-top: 16px;
+            scroll-margin-top: 80px;
+        }
+
+        h4{
+            font-weight: 600;
+            line-height: 1.2rem;
+            padding-top: 16px;
+        }
+
+        img {
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        p {
+            font-size: 0.85rem;
+            color: #737171;
+            line-height: 1.2rem;
+            margin: 8px 0px 0px;
+        }
+
+        .productos__link__animacion:hover{
+            transform: translate(1px, -4px);
+        }
+
+        .productos__cards__cantidad{
+            margin: 4px 0px 8px;
+            font-weight: 700;
+            font-family: 'Fira Sans','Fira Sans Extra Condensed', sans-serif;
+            letter-spacing: 0.01rem;
+        }
+
+        .productos__button {
+            width: 100%;
+            border-radius: 4px;
+            background-color: transparent;
+            color: #D83A56;
+            font-weight: 600;
+            border-color: #ee9baa;
+            border-style: solid;
+            box-shadow: 0.5px 2px 1px rgba(90, 1, 1, 0.24);
+            margin-bottom: 32px;
+        }
+
+        .productos__budines__titulo { grid-area: productos__budines__titulo; }
+        .productos__cookies__titulo { grid-area: productos__cookies__titulo; }
+        .productos__cupcakes__titulo { grid-area: productos__cupcakes__titulo; }
+        .productos__macarons__titulo { grid-area: productos__macarons__titulo; }
+        .productos__mousses__titulo { grid-area: productos__mousses__titulo; }
+        .productos__shots__titulo { grid-area: productos__shots__titulo; }
+        .productos__tartas__titulo { grid-area: productos__tartas__titulo; }
+        .productos__tortas__titulo { grid-area: productos__tortas__titulo; }
+
+        .productos__budines, .productos__cookies, .productos__cupcakes, .productos__macarons, .productos__mousses, .productos__shots, .productos__tortas  { 
+            border-bottom: solid 2px #e6909f;
+        }
+
+        .productos__budines__limon { grid-area: productos__budines__limon;}
+        .productos__budines__hamburgues { grid-area: productos__budines__hamburgues;}
+        .productos__budines__ingles { grid-area: productos__budines__ingles;}
+        .productos__budines__marmolado { grid-area: productos__budines__marmolado;}
+
+        .productos__cookies__decoradas { grid-area: productos__cookies__decoradas;}
+
+        .productos__cupcakes__chocolate { grid-area: productos__cupcakes__chocolate;}
+        .productos__cupcakes__vainilla { grid-area: productos__cupcakes__vainilla;}
+        .productos__cupcakes__marmolado { grid-area: productos__cupcakes__marmolado;}
+
+        .productos__macarons__7unidades { grid-area: productos__macarons__7unidades;}
+        .productos__macarons__12unidades { grid-area: productos__macarons__12unidades;}
+        .productos__macarons__24unidades { grid-area: productos__macarons__24unidades;}
+
+        .productos__mousses__frutosRojo { grid-area: productos__mousses__frutosRojo;}
+        .productos__mousses__choco { grid-area: productos__mousses__choco;}
+        .productos__mousses__chocoNaranja { grid-area: productos__mousses__chocoNaranja;}
+        .productos__mousses__tresChocolates { grid-area: productos__mousses__tresChocolates;}
+
+        .productos__shots__frutosRojo { grid-area: productos__shots__frutosRojo;}
+        .productos__shots__chocoBlanco { grid-area: productos__shots__chocoBlanco;}
+        .productos__shots__dulceDeLeche { grid-area: productos__shots__dulceDeLeche;}
+        .productos__shots__frambuesa { grid-area: productos__shots__frambuesa;}
+        .productos__shots__lemonpie { grid-area: productos__shots__lemonpie;}
+
+        .productos__tartas__cheesecake { grid-area: productos__tartas__cheesecake;}
+        .productos__tartas__crumble { grid-area: productos__tartas__crumble;}
+        .productos__tartas__frutilla { grid-area: productos__tartas__frutilla;}
+        .productos__tartas__lemonpie { grid-area: productos__tartas__lemonpie;}
+        .productos__tartas__toffee { grid-area: productos__tartas__toffee;}
+        
+        .productos__tortas__carrot { grid-area: productos__tortas__carrot;}
+        .productos__tortas__dobleChoco { grid-area: productos__tortas__dobleChoco;}
+        .productos__tortas__redVelvet { grid-area: productos__tortas__redVelvet;}
+        .productos__tortas__selvaNegra { grid-area: productos__tortas__selvaNegra;}
+
+    }
+
+    .productos__aside { grid-area: productos__aside; 
+    background-color: #ffe3e8;
+    padding: 16px;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 660px){
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr;
+        gap: 8px 36px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "productos__aside productos__budines__titulo productos__budines__titulo productos__budines__titulo productos__budines__titulo productos__budines__titulo" 
+        "productos__aside productos__budines__limon budines__hamburgues  budines__ingles productos__budines__marmolado"
+        "productos__aside productos__cookies__titulo productos__cookies__titulo productos__cookies__titulo productos__cookies__titulo productos__cookies__titulo" 
+        "productos__aside productos__cookies__decoradas"
+        "productos__aside productos__cupcakes__titulo productos__cupcakes__titulo productos__cupcakes__titulo productos__cupcakes__titulo productos__cupcakes__titulo" 
+        "productos__aside productos__cupcakes__chocolate productos__cupcakes__vainilla productos__cupcakes__marmolado"
+        "productos__aside productos__macarons__titulo productos__macarons__titulo productos__macarons__titulo productos__macarons__titulo productos__macarons__titulo" 
+        "productos__aside productos__macarons__7unidades productos__macarons__12unidades productos__macarons__24unidades "
+        "productos__aside productos__mousses__titulo productos__mousses__titulo productos__mousses__titulo productos__mousses__titulo productos__mousses__titulo" 
+        "productos__aside productos__mousses__frutosRojo productos__mousses__choco productos__mousses__chocoNaranja productos__mousses__tresChocolates"
+        "productos__aside productos__shots__titulo productos__shots__titulo productos__shots__titulo productos__shots__titulo productos__shots__titulo" 
+        "productos__productos__shots__frutosRojo productos__shots__chocoBlanco productos__shots__dulceDeLeche productos__shots__frambuesa productos__shots__lemonpie"
+        "productos__aside productos__tartas__titulo productos__tartas__titulo productos__tartas__titulo productos__tartas__titulo productos__tartas__titulo" 
+        "productos__aside productos__tartas__cheesecake productos__tartas__crumble productos__tartas__frutilla productos__tartas__lemonpie productos__tartas__toffee"
+        "productos__aside productos__tortas__titulo productos__tortas__titulo productos__tortas__titulo productos__tortas__titulo productos__tortas__titulo" 
+        "productos__aside productos__tortas__carrot productos__tortas__dobleChoco productos__tortas__redVelvet productos__tortas__selvaNegra";
+        width: 100%;
+        height: 100%;
+        margin-bottom: 48px;
+    }
+}
+
+@media only screen and (min-width: 660px) and (max-width: 992px){
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr;
+        gap: 8px 36px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "productos__aside productos__budines__titulo productos__budines__titulo productos__budines__titulo productos__budines__titulo productos__budines__titulo" 
+        "productos__aside productos__budines__limon budines__hamburgues  budines__ingles productos__budines__marmolado"
+        "productos__aside productos__cookies__titulo productos__cookies__titulo productos__cookies__titulo productos__cookies__titulo productos__cookies__titulo" 
+        "productos__aside productos__cookies__decoradas"
+        "productos__aside productos__cupcakes__titulo productos__cupcakes__titulo productos__cupcakes__titulo productos__cupcakes__titulo productos__cupcakes__titulo" 
+        "productos__aside productos__cupcakes__chocolate productos__cupcakes__vainilla productos__cupcakes__marmolado"
+        "productos__aside productos__macarons__titulo productos__macarons__titulo productos__macarons__titulo productos__macarons__titulo productos__macarons__titulo" 
+        "productos__aside productos__macarons__7unidades productos__macarons__12unidades productos__macarons__24unidades "
+        "productos__aside productos__mousses__titulo productos__mousses__titulo productos__mousses__titulo productos__mousses__titulo productos__mousses__titulo" 
+        "productos__aside productos__mousses__frutosRojo productos__mousses__choco productos__mousses__chocoNaranja productos__mousses__tresChocolates"
+        "productos__aside productos__shots__titulo productos__shots__titulo productos__shots__titulo productos__shots__titulo productos__shots__titulo" 
+        "productos__productos__shots__frutosRojo productos__shots__chocoBlanco productos__shots__dulceDeLeche productos__shots__frambuesa productos__shots__lemonpie"
+        "productos__aside productos__tartas__titulo productos__tartas__titulo productos__tartas__titulo productos__tartas__titulo productos__tartas__titulo" 
+        "productos__aside productos__tartas__cheesecake productos__tartas__crumble productos__tartas__frutilla productos__tartas__lemonpie productos__tartas__toffee"
+        "productos__aside productos__tortas__titulo productos__tortas__titulo productos__tortas__titulo productos__tortas__titulo productos__tortas__titulo" 
+        "productos__aside productos__tortas__carrot productos__tortas__dobleChoco productos__tortas__redVelvet productos__tortas__selvaNegra";
+        width: 100%;
+        height: 100%;
+        margin-bottom: 48px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr;
+        gap: 8px 36px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "productos__aside productos__budines__titulo productos__budines__titulo productos__budines__titulo productos__budines__titulo productos__budines__titulo" 
+        "productos__aside productos__budines__limon budines__hamburgues  budines__ingles productos__budines__marmolado"
+        "productos__aside productos__cookies__titulo productos__cookies__titulo productos__cookies__titulo productos__cookies__titulo productos__cookies__titulo" 
+        "productos__aside productos__cookies__decoradas"
+        "productos__aside productos__cupcakes__titulo productos__cupcakes__titulo productos__cupcakes__titulo productos__cupcakes__titulo productos__cupcakes__titulo" 
+        "productos__aside productos__cupcakes__chocolate productos__cupcakes__vainilla productos__cupcakes__marmolado"
+        "productos__aside productos__macarons__titulo productos__macarons__titulo productos__macarons__titulo productos__macarons__titulo productos__macarons__titulo" 
+        "productos__aside productos__macarons__7unidades productos__macarons__12unidades productos__macarons__24unidades "
+        "productos__aside productos__mousses__titulo productos__mousses__titulo productos__mousses__titulo productos__mousses__titulo productos__mousses__titulo" 
+        "productos__aside productos__mousses__frutosRojo productos__mousses__choco productos__mousses__chocoNaranja productos__mousses__tresChocolates"
+        "productos__aside productos__shots__titulo productos__shots__titulo productos__shots__titulo productos__shots__titulo productos__shots__titulo" 
+        "productos__productos__shots__frutosRojo productos__shots__chocoBlanco productos__shots__dulceDeLeche productos__shots__frambuesa productos__shots__lemonpie"
+        "productos__aside productos__tartas__titulo productos__tartas__titulo productos__tartas__titulo productos__tartas__titulo productos__tartas__titulo" 
+        "productos__aside productos__tartas__cheesecake productos__tartas__crumble productos__tartas__frutilla productos__tartas__lemonpie productos__tartas__toffee"
+        "productos__aside productos__tortas__titulo productos__tortas__titulo productos__tortas__titulo productos__tortas__titulo productos__tortas__titulo" 
+        "productos__aside productos__tortas__carrot productos__tortas__dobleChoco productos__tortas__redVelvet productos__tortas__selvaNegra";
+        width: 100%;
+        height: 100%;
+        margin-bottom: 48px;
+    }
+}

@@ -121,7 +121,7 @@
 
     .home__introduccion__galeria{
         display: grid;
-        grid-template-columns: 1;
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 0.5fr);
         gap: 24px;
         grid-template-areas:

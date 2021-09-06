@@ -30,8 +30,57 @@ header{
             width: 24px;
         }
     }
+
+    .navbar-nav li:hover{
+        button{
+            border-color: transparent;
+            }
+    }
+
     .dropdown-toggle-split{
         padding-left: 0%;
         color: white;
     }
+    .nav-item-desplegable{
+        display: flex;
+        flex-direction: column;
+        .btn-group{
+            display: inline-block;
+            margin-right: 8px;
+            .btn-danger{
+                padding: 0;
+                background-color: transparent;
+                }
+                .nav-link{
+                    padding-right: 0;
+                }
+            .btn-danger:hover{
+                border-color: transparent;
+            }
+            .dropdown-menu{
+                border-color: transparent;
+                .dropdown-item{
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border-radius: 4px;
+                }
+                .dropdown-item:hover{
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border-radius: 4px;
+                }
+            }
+            .dropdown-toggle-split {
+                margin-left: 4px;
+                padding-top: 2px;
+            }
+        }
+        .dropdown-menu.bg.show::after{
+            display: none;
+        }
+
+        .btn-danger:not(:disabled):not(.disabled).active, .btn-danger:not(:disabled):not(.disabled):active, .show>.btn-danger.dropdown-toggle {
+            background-color: transparent;
+            border-color: transparent;
+        }
+    }
+
 }
