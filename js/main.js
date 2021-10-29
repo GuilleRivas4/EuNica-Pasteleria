@@ -17,4 +17,3 @@ else if (usuarioRegular) {
 else {
     alert("Datos Incorrectos")
 }
-
