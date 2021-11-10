@@ -106,6 +106,12 @@ class  Producto {
     }
 }
 
-let CompraUsuario = Number(prompt("Ingrese lal cantidad que quiere comprar del producto"));
-const objeto1 = new Producto ("toffe", "tartas", 200, CompraUsuario);
+let productoComprado = prompt("Ingrese que producto quiere comprar...Toffee/Budin/Carrot")
+let compraUsuario = Number(prompt("Ingrese la cantidad que quiere comprar del producto"));
+const objeto1 = new Producto (productoComprado, "tartas", 200, compraUsuario);
+const objeto2 = new Producto (productoComprado, "tortas", 200, compraUsuario);
+const objeto3 = new Producto (productoComprado, "tartas", 200, compraUsuario);
+
 objeto1.controlStock()
+objeto2.controlStock()
+objeto3.controlStock()
