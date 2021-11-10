@@ -37,7 +37,7 @@ do{
 }while (contraseña == EzequielGarcia || contraseña == RobertoCarlos || contraseña == JuanPerez);
 alert("Contrasela Correcta") 
 
-TODAVIA NO LO ARREGLE PERDON */
+TODAVIA NO LO ARREGLE PERDON
 
 
 
@@ -73,7 +73,7 @@ const pedido = Number(prompt(`Seleccione cual quiere consultar
 
 switch (tortas) {
     case 1:
-        const caso1 = porcionesBudin()
+        const budin = porcionesBudin()
         break;
     case 2:
         const toffe = porcionesToffe()
@@ -82,4 +82,30 @@ switch (tortas) {
         const carrot = porcionesCarrotCake()
         break;
 }
+*/
 
+class  Producto { 
+    constructor(nombre, categoria, stock, cantidadComprada){
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.stock = stock;
+        this.cantidad = cantidadComprada;
+    }
+
+    controlStock(){
+        if(this.cantidad > this.stock){
+            alert("No tenemos suficiente stock de este producto para realizar su compra")
+        }
+        else if(this.cantidad < this.stock && this.cantidad > 0){
+            this.stock = this.stock - this.cantidad
+            alert("La cantidad ingresada es: " + this.cantidad + " el stock actualizado es de: " + this.stock);
+        }
+        else {
+            alert("Usted ingreso una cantidad negativa, eso es incorrecto")
+        }
+    }
+}
+
+let CompraUsuario = Number(prompt("Ingrese lal cantidad que quiere comprar del producto"));
+const objeto1 = new Producto ("toffe", "tartas", 200, CompraUsuario);
+objeto1.controlStock()
