@@ -10,18 +10,22 @@ const productos = [];
 const carrito = [];
 
 productos.push(new Producto('Budin hamburgues', 'Budines', 240));
-productos.push(new Producto('Cupcake de chocolate', 'Cupcakes', 140));
 productos.push(new Producto('Cheseecake', 'Tartas', 260));
+productos.push(new Producto('Cupcake de chocolate', 'Cupcakes', 140));
 productos.push(new Producto('Selva negra', 'Budines', 380));
+
 
 const verProductos = () => {
     let mensaje = '';
     for (const producto of productos) {
         mensaje += `Producto: ${producto.nombre}\nCaterogia: ${producto.categoria}\nPrecio: $${producto.precio}\n\n`
     }
-
     return mensaje;
 }
+
+productos.sort((a, b) => {
+    return a.precio - b.precio
+});
 
 const comprar = () => {
     const productoSolicitado = prompt(`¿Qué producto desea comprar?\n\n ${verProductos(productos)}`);
