@@ -1,117 +1,75 @@
-/* let nombreUsuario = prompt("Ingrese su nombre");
-let mensajeBienvenida = "¡Bienvenido/a " + nombreUsuario + "!";
-alert(mensajeBienvenida) */
-
-/*const usuario = prompt("Ingrese su nombre de usuario");
-const contraseña = prompt("ingrese su contraseña");
-
-const usuarioAdmin = (usuario == "marcoMeAprobas" && contraseña == "PorFavor")
-const usuarioRegular = (usuario == "originalidad" && contraseña == "0" ) || (usuario == "pido" && contraseña == "disculpas" )
-
-if (usuarioAdmin ) {
-    alert ("Bienvenido Admin")
-} 
-else if (usuarioRegular) {
-    alert("Bienvenido " + usuario)
-}
-else {
-    alert("Datos Incorrectos")
-} */
-
-/*const numero = Number(prompt("Que tabla querés saber"));
-
-for (let i = 0; i <= 10; i++) {
-    console.log( `${numero}x${i} = ${numero * i}`);
-}
-
-let contraseña;
-let intentos = 5;
-
-do{
-    contraseña = prompt("Ingrese su contraseña");
-    if (contraseña !== JuanPerez || contraseña !== RobertoCarlos || contraseña !== EzequielGarcia){
-        alert("Contraseña incorrecta");
-        intentos--;
-    }
-
-}while (contraseña == EzequielGarcia || contraseña == RobertoCarlos || contraseña == JuanPerez);
-alert("Contrasela Correcta") 
-
-TODAVIA NO LO ARREGLE PERDON
-
-
-
-function porcionesBudin(){
-    alert(`
-        3 porciones $180
-        6 porciones $360
-        9 pociones $540
-        12 porciones $720`)
-    
-}
-function porcionesToffe(){
-    alert(`
-        3 porciones $180
-        6 porciones $360
-        9 pociones $540
-        12 porciones $720`)
-    
-}
-function porcionesCarrotCake(){
-    alert(`
-        3 porciones $180
-        6 porciones $360
-        9 pociones $540
-        12 porciones $720`)
-    
-}
-
-const pedido = Number(prompt(`Seleccione cual quiere consultar
-1 - Budin
-2 - Toffe
-3 - Carrot Cake`));
-
-switch (tortas) {
-    case 1:
-        const budin = porcionesBudin()
-        break;
-    case 2:
-        const toffe = porcionesToffe()
-        break;
-    case 3:
-        const carrot = porcionesCarrotCake()
-        break;
-}
-*/
-
-class  Producto { 
-    constructor(nombre, categoria, stock, cantidadComprada){
+class Producto{
+    constructor(nombre, categoria, precio ) {
         this.nombre = nombre;
         this.categoria = categoria;
-        this.stock = stock;
-        this.cantidad = cantidadComprada;
-    }
-
-    controlStock(){
-        if(this.cantidad > this.stock){
-            alert("No tenemos suficiente stock de este producto para realizar su compra")
-        }
-        else if(this.cantidad < this.stock && this.cantidad > 0){
-            this.stock = this.stock - this.cantidad
-            alert("La cantidad ingresada es: " + this.cantidad + " el stock actualizado es de: " + this.stock);
-        }
-        else {
-            alert("Usted ingreso una cantidad negativa, eso es incorrecto")
-        }
+        this.precio = Number(precio);
     }
 }
 
-let productoComprado = prompt("Ingrese que producto quiere comprar...Toffee/Budin/Carrot")
-let compraUsuario = Number(prompt("Ingrese la cantidad que quiere comprar del producto"));
-const objeto1 = new Producto (productoComprado, "tartas", 200, compraUsuario);
-const objeto2 = new Producto (productoComprado, "tortas", 200, compraUsuario);
-const objeto3 = new Producto (productoComprado, "tartas", 200, compraUsuario);
+const productos = [];
+const carrito = [];
 
-objeto1.controlStock()
-objeto2.controlStock()
-objeto3.controlStock()
+productos.push(new Producto('Budin hamburgues', 'Budines', 240));
+productos.push(new Producto('Cupcake de chocolate', 'Cupcakes', 140));
+productos.push(new Producto('Cheseecake', 'Tartas', 260));
+productos.push(new Producto('Selva negra', 'Budines', 380));
+
+const verProductos = () => {
+    let mensaje = '';
+    for (const producto of productos) {
+        mensaje += `Producto: ${producto.nombre}\nCaterogia: ${producto.categoria}\nPrecio: $${producto.precio}\n\n`
+    }
+
+    return mensaje;
+}
+
+const comprar = () => {
+    const productoSolicitado = prompt(`¿Qué producto desea comprar?\n\n ${verProductos(productos)}`);
+    const productoUsuario  = productos.find(producto => producto.nombre.toLocaleLowerCase() === productoSolicitado.toLocaleLowerCase().trim());
+    if (productoUsuario) {
+        carrito.push(productoUsuario);
+        alert(`Agregaste ${productoUsuario.nombre} al carrito`);
+    } else {
+        alert('Producto no encontrado')
+    }
+}
+
+const mostrarCarrito = () => {
+    const productosCarrito = verProductos(carrito);
+    if (productosCarrito) {
+        alert (productosCarrito);
+    }
+    else{
+        alert('Su carrito esta vacío')
+    }
+}
+
+
+let opcion;
+do {
+    opcion = Number(prompt(`Ingrese una opción:
+        1 - Ver productos
+        2 - Comprar
+        3 - Mostrar carrito
+        4 - Salir
+    `));
+
+    switch (opcion) {
+        case 1:
+            const infoPorductos = verProductos();
+            alert(infoPorductos);
+            break;
+        case 2:
+            comprar();
+            break;
+        case 3:
+            mostrarCarrito();
+            break
+        case 4:
+            alert('Gracias por su visita');
+            break
+        default:
+            alert('Usted ingreso una opción incorrecta');
+            break;
+    }
+} while(opcion !== 4);
