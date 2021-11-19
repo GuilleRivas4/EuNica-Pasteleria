@@ -1,4 +1,4 @@
-class Producto{
+/* class Producto{
     constructor(nombre, categoria, precio ) {
         this.nombre = nombre;
         this.categoria = categoria;
@@ -76,4 +76,18 @@ do {
             alert('Usted ingreso una opción incorrecta');
             break;
     }
-} while(opcion !== 4);
+} while(opcion !== 4); */
+
+let productos = [{id: 1, nombre : "Budin hamburgues", precio: 240},
+{id: 1, nombre : "Cheesecake", precio: 240},
+{id: 1, nombre : "Cupcake de chocolate", precio: 240},
+{id: 1, nombre : "Selva negra", precio: 240}];
+
+let mostrarProductos = document.querySelector("#catalogo")
+
+for (let i = 0; i < productos.length; i++){
+    mostrarProductos.innerHTML += `
+    <h3>${productos[i].nombre}</h3>
+    <p>${productos[i].precio}</p>
+    <button>Agregar al carrito</button>`
+}
